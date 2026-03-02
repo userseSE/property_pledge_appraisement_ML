@@ -1,0 +1,5 @@
+使用Scikit-Learn模块
+开头的数据检验：
+https://blog.csdn.net/qq_33876194/article/details/88403394
+svm选择特征：
+https://blog.csdn.net/wokaowokaowokao12345/article/details/109441753

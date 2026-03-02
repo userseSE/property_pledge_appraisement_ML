@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760">
+<rect x="0" y="0" width="100%" height="100%" fill="#0b1220"/>
+<text x="590.0" y="48" text-anchor="middle" font-family="Arial" font-size="34" fill="#f1f5f9">Top 10 |Correlation| with t_price (Train Split)</text>
+<text x="26" y="340.0" transform="rotate(-90 26 340.0)" text-anchor="middle" font-family="Arial" font-size="18" fill="#94a3b8">Absolute Pearson Correlation</text>
+<line x1="90" y1="590.0" x2="1140" y2="590.0" stroke="#1f2937" stroke-width="1"/>
+<text x="78" y="596.0" text-anchor="end" font-family="Arial" font-size="14" fill="#94a3b8">0.000</text>
+<line x1="90" y1="490.0" x2="1140" y2="490.0" stroke="#1f2937" stroke-width="1"/>
+<text x="78" y="496.0" text-anchor="end" font-family="Arial" font-size="14" fill="#94a3b8">0.089</text>
+<line x1="90" y1="390.0" x2="1140" y2="390.0" stroke="#1f2937" stroke-width="1"/>
+<text x="78" y="396.0" text-anchor="end" font-family="Arial" font-size="14" fill="#94a3b8">0.178</text>
+<line x1="90" y1="290.0" x2="1140" y2="290.0" stroke="#1f2937" stroke-width="1"/>
+<text x="78" y="296.0" text-anchor="end" font-family="Arial" font-size="14" fill="#94a3b8">0.266</text>
+<line x1="90" y1="190.0" x2="1140" y2="190.0" stroke="#1f2937" stroke-width="1"/>
+<text x="78" y="196.0" text-anchor="end" font-family="Arial" font-size="14" fill="#94a3b8">0.355</text>
+<line x1="90" y1="90.0" x2="1140" y2="90.0" stroke="#1f2937" stroke-width="1"/>
+<text x="78" y="96.0" text-anchor="end" font-family="Arial" font-size="14" fill="#94a3b8">0.444</text>
+<rect x="106.0" y="135.5" width="87.4" height="454.5" fill="#38bdf8" rx="4"/>
+<text x="149.7" y="127.5" text-anchor="middle" font-family="Arial" font-size="13" fill="#e2e8f0">0.403</text>
+<text x="149.7" y="614.0" transform="rotate(35 149.7 614.0)" text-anchor="start" font-family="Arial" font-size="13" fill="#cbd5e1">area</text>
+<rect x="209.4" y="147.8" width="87.4" height="442.2" fill="#22d3ee" rx="4"/>
+<text x="253.1" y="139.8" text-anchor="middle" font-family="Arial" font-size="13" fill="#e2e8f0">0.393</text>
+<text x="253.1" y="614.0" transform="rotate(35 253.1 614.0)" text-anchor="start" font-family="Arial" font-size="13" fill="#cbd5e1">gdp</text>
+<rect x="312.8" y="201.0" width="87.4" height="389.0" fill="#38bdf8" rx="4"/>
+<text x="356.5" y="193.0" text-anchor="middle" font-family="Arial" font-size="13" fill="#e2e8f0">0.345</text>
+<text x="356.5" y="614.0" transform="rotate(35 356.5 614.0)" text-anchor="start" font-family="Arial" font-size="13" fill="#cbd5e1">hall</text>
+<rect x="416.2" y="207.8" width="87.4" height="382.2" fill="#22d3ee" rx="4"/>
+<text x="459.9" y="199.8" text-anchor="middle" font-family="Arial" font-size="13" fill="#e2e8f0">0.339</text>
+<text x="459.9" y="614.0" transform="rotate(35 459.9 614.0)" text-anchor="start" font-family="Arial" font-size="13" fill="#cbd5e1">c_population</text>
+<rect x="519.6" y="414.4" width="87.4" height="175.6" fill="#38bdf8" rx="4"/>
+<text x="563.3" y="406.4" text-anchor="middle" font-family="Arial" font-size="13" fill="#e2e8f0">0.156</text>
+<text x="563.3" y="614.0" transform="rotate(35 563.3 614.0)" text-anchor="start" font-family="Arial" font-size="13" fill="#cbd5e1">room</text>
+<rect x="623.0" y="480.3" width="87.4" height="109.7" fill="#22d3ee" rx="4"/>
+<text x="666.7" y="472.3" text-anchor="middle" font-family="Arial" font-size="13" fill="#e2e8f0">0.097</text>
+<text x="666.7" y="614.0" transform="rotate(35 666.7 614.0)" text-anchor="start" font-family="Arial" font-size="13" fill="#cbd5e1">furnishment</text>
+<rect x="726.4" y="496.9" width="87.4" height="93.1" fill="#38bdf8" rx="4"/>
+<text x="770.1" y="488.9" text-anchor="middle" font-family="Arial" font-size="13" fill="#e2e8f0">0.083</text>
+<text x="770.1" y="614.0" transform="rotate(35 770.1 614.0)" text-anchor="start" font-family="Arial" font-size="13" fill="#cbd5e1">green_rate</text>
+<rect x="829.8" y="501.3" width="87.4" height="88.7" fill="#22d3ee" rx="4"/>
+<text x="873.5" y="493.3" text-anchor="middle" font-family="Arial" font-size="13" fill="#e2e8f0">0.079</text>
+<text x="873.5" y="614.0" transform="rotate(35 873.5 614.0)" text-anchor="start" font-family="Arial" font-size="13" fill="#cbd5e1">span</text>
+<rect x="933.2" y="508.1" width="87.4" height="81.9" fill="#38bdf8" rx="4"/>
+<text x="976.9" y="500.1" text-anchor="middle" font-family="Arial" font-size="13" fill="#e2e8f0">0.073</text>
+<text x="976.9" y="614.0" transform="rotate(35 976.9 614.0)" text-anchor="start" font-family="Arial" font-size="13" fill="#cbd5e1">height</text>
+<rect x="1036.6" y="510.8" width="87.4" height="79.2" fill="#22d3ee" rx="4"/>
+<text x="1080.3" y="502.8" text-anchor="middle" font-family="Arial" font-size="13" fill="#e2e8f0">0.070</text>
+<text x="1080.3" y="614.0" transform="rotate(35 1080.3 614.0)" text-anchor="start" font-family="Arial" font-size="13" fill="#cbd5e1">follower</text>
+</svg>

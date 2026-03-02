@@ -1,0 +1,44 @@
+Data Collection
+1. Index
+2. Tags
+3. Developer
+4. Number of bedrooms
+5. Number of living rooms
+6. Area
+7. Orientation
+8. Decoration/furnishing status
+9. Floor level (low / middle / high)
+10. Total number of floors
+11. Building type
+12. Number of followers
+13. Listing publish time
+14. Total price
+15. Unit price
+16. City
+
+Data collection cutoff: 2022-11-27
+
+Core Variables
+1. City
+2. Bedrooms
+3. Living rooms
+4. Area
+5. Orientation
+6. Furnishing
+7. Floor level
+8. Total floors
+9. Building type
+10. 2021 city GDP (major cities from National Bureau of Statistics; others manually collected from official news and local government announcements)
+11. Number of state-owned enterprises in the city
+12. Number of followers (liquidity proxy)
+13. Listing duration (days on market; liquidity proxy)
+14. Region of city
+15. 2021 city greening rate (from China City Statistical Yearbook 2021 + local government announcements)
+16. Total price (target in some tasks)
+17. Unit price (target in some tasks)
+
+Orientation Note
+Building orientation usually refers to the main facade direction:
+1) For residential buildings, the facade of main rooms.
+2) For public buildings, the most prominent facade or the facade with the main entrance.
+

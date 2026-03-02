@@ -1,0 +1,50 @@
+Cleaning Summary (legacy project notes)
+
+Raw records: 394,081
+- Removed rows with missing total price: 2
+- Removed parking-space sale records: 91
+- Removed rows with missing building structure: 76,114
+- Removed rows with missing floor info for non-villa records: 17,474
+- Basement floor encoded as: -1
+- Removed villa samples: 2,902 (including 3 rows with missing villa subtype)
+- Removed rows with total floors = 0: 1
+- For orientation, only kept the first orientation token
+
+Rows after the above filters: 298,146
+Duplicate rows removed: 30,841
+Remaining unique rows: 267,305
+
+Missing value filling note:
+- City water resources for Jiangyin were imputed using Wuxi area ratio.
+
+Feature Name Mapping
+- room: bedrooms
+- hall: living rooms
+- area: floor area (sqm)
+- orientation: E=0, S=1, W=2, N=3
+- furnishment: other=0, unfinished=1, simple=2, well-decorated=3
+- level: basement=0, bottom=1, low=2, middle=3, high=4, top=5
+- height: total floors
+- architecture: bungalow=0, slab=1, slab-tower=2, tower=3
+- follower: follower count
+- span: listing duration (days)
+- gdp: city GDP
+- region: northeast=0, north=1, east=2, northwest=3, southwest=4, central-south=5
+- green_rate: city greening rate (%)
+- u_price: unit price
+- l_tax: tax-benefit tag
+- transport: transportation convenience / near subway
+- business: near business district / malls / CBD
+- water: sea/river/lake view tag
+- p_lot: parking lot tag (has parking=1)
+- light: good daylight tag
+- park: near park tag
+- c_population: municipal district resident population (10k persons)
+- c_area: built-up area (sq.km)
+- c_water_resources: total water resources (10,000 cubic meters)
+
+Tax Tag Interpretation
+- "Over five years only tax" typically means VAT/additional tax and personal income tax exemptions.
+- "Over two years" usually means VAT/additional tax exemption for ordinary housing.
+- These tags were used as textual feature signals in the project.
+

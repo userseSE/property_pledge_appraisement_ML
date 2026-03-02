@@ -1,0 +1,8 @@
+Random Forest Process Notes (translated)
+
+- Implemented with Scikit-Learn.
+- Early data-check reference:
+  https://blog.csdn.net/qq_33876194/article/details/88403394
+- SVM-based feature selection reference:
+  https://blog.csdn.net/wokaowokaowokao12345/article/details/109441753
+

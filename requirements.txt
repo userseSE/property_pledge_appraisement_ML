@@ -1,0 +1,40 @@
+# Core notebook/runtime
+jupyterlab
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+joblib
+
+# Gradient boosting and ensemble models
+xgboost
+lightgbm
+catboost
+mlxtend
+
+# Deep learning (used in stacking sections)
+tensorflow
+keras
+
+# Visualization/export helpers
+graphviz
+pydotplus
+
+# Crawling / parsing
+requests
+lxml
+parsel
+selenium
+pyecharts
+beautifulsoup4
+pycryptodome
+
+# Excel / data IO
+xlrd
+xlsxwriter
+
+# Misc notebook dependency seen in tests
+opencv-python
+

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760">
+<rect x="0" y="0" width="100%" height="100%" fill="#0b1220"/>
+<text x="590.0" y="48" text-anchor="middle" font-family="Arial" font-size="34" fill="#f1f5f9">Target Distribution (t_price, capped at P99=670.0)</text>
+<line x1="90" y1="640.0" x2="1140" y2="640.0" stroke="#1f2937" stroke-width="1"/>
+<text x="78" y="646.0" text-anchor="end" font-family="Arial" font-size="14" fill="#94a3b8">0</text>
+<line x1="90" y1="530.0" x2="1140" y2="530.0" stroke="#1f2937" stroke-width="1"/>
+<text x="78" y="536.0" text-anchor="end" font-family="Arial" font-size="14" fill="#94a3b8">1082</text>
+<line x1="90" y1="420.0" x2="1140" y2="420.0" stroke="#1f2937" stroke-width="1"/>
+<text x="78" y="426.0" text-anchor="end" font-family="Arial" font-size="14" fill="#94a3b8">2164</text>
+<line x1="90" y1="310.0" x2="1140" y2="310.0" stroke="#1f2937" stroke-width="1"/>
+<text x="78" y="316.0" text-anchor="end" font-family="Arial" font-size="14" fill="#94a3b8">3247</text>
+<line x1="90" y1="200.0" x2="1140" y2="200.0" stroke="#1f2937" stroke-width="1"/>
+<text x="78" y="206.0" text-anchor="end" font-family="Arial" font-size="14" fill="#94a3b8">4329</text>
+<line x1="90" y1="90.0" x2="1140" y2="90.0" stroke="#1f2937" stroke-width="1"/>
+<text x="78" y="96.0" text-anchor="end" font-family="Arial" font-size="14" fill="#94a3b8">5412</text>
+<polyline points="90.0,632.6 115.6,548.0 141.2,382.2 166.8,227.6 192.4,119.7 218.0,90.0 243.7,197.4 269.3,285.1 294.9,327.0 320.5,392.6 346.1,414.4 371.7,478.9 397.3,529.1 422.9,530.9 448.5,551.0 474.1,567.6 499.8,577.7 525.4,597.5 551.0,590.8 576.6,603.7 602.2,611.4 627.8,610.3 653.4,618.7 679.0,618.7 704.6,622.9 730.2,626.1 755.9,621.3 781.5,629.9 807.1,628.5 832.7,630.8 858.3,631.0 883.9,628.8 909.5,633.7 935.1,633.7 960.7,633.8 986.3,633.1 1012.0,633.2 1037.6,634.6 1063.2,636.3 1088.8,636.4 1114.4,636.1 1140.0,593.8" fill="none" stroke="#38bdf8" stroke-width="3"/>
+<polyline points="90.0,637.4 115.6,598.4 141.2,535.1 166.8,466.4 192.4,416.5 218.0,402.1 243.7,453.1 269.3,487.2 294.9,501.6 320.5,536.8 346.1,538.2 371.7,573.6 397.3,586.7 422.9,597.4 448.5,601.2 474.1,606.7 499.8,612.6 525.4,620.1 551.0,622.0 576.6,625.6 602.2,627.6 627.8,627.3 653.4,631.6 679.0,631.3 704.6,632.4 730.2,632.3 755.9,632.7 781.5,634.9 807.1,634.2 832.7,636.4 858.3,637.0 883.9,636.7 909.5,636.4 935.1,637.2 960.7,638.0 986.3,638.2 1012.0,636.8 1037.6,638.0 1063.2,638.2 1088.8,637.9 1114.4,638.6 1140.0,619.3" fill="none" stroke="#f97316" stroke-width="3"/>
+<text x="90" y="732" font-family="Arial" font-size="15" fill="#38bdf8">Train Histogram</text>
+<text x="270" y="732" font-family="Arial" font-size="15" fill="#f97316">Test Histogram</text>
+</svg>

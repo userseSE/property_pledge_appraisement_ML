@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Training artifacts
+code/catboost_info/
+doc/code/catboost_info/
+
+# Office temp files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# Logs
+*.log
+

@@ -1,0 +1,3 @@
+-r requirements-analytics.txt
+scikit-learn==1.7.1
+xgboost==3.0.4

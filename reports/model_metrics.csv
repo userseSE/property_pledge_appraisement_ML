@@ -1,0 +1,17 @@
+evaluation,split,model,sample_count,city_count,mae,rmse,r2,median_absolute_error,best_iteration
+random_split,frozen_test,city_training_median,40104,135,56.629026,124.180072,0.342702,30.200000,
+random_split,frozen_test,global_training_median,40104,135,75.872521,158.395331,-0.069407,41.200000,
+random_split,frozen_test,ridge,40104,135,47.187102,97.294875,0.596505,28.408642,
+random_split,frozen_test,xgboost,40104,135,35.955698,76.723616,0.749091,18.763401,799.000000
+random_split,validation,city_training_median,40112,135,57.602351,139.355421,0.308277,30.000000,
+random_split,validation,global_training_median,40112,135,76.887353,172.591254,-0.061016,41.000000,
+random_split,validation,ridge,40112,135,48.453282,138.934173,0.312453,28.079973,
+random_split,validation,xgboost,40112,135,36.871414,88.759894,0.719380,18.585632,799.000000
+unseen_city_stress,unseen_city_test,city_training_median,39967,19,98.193241,226.389137,-0.065332,49.000000,
+unseen_city_stress,unseen_city_test,global_training_median,39967,19,98.193241,226.389137,-0.065332,49.000000,
+unseen_city_stress,unseen_city_test,ridge,39967,19,91.648682,197.113014,0.192385,57.499277,
+unseen_city_stress,unseen_city_test,xgboost,39967,19,84.511520,199.115701,0.175891,39.334872,799.000000
+unseen_city_stress,validation,city_training_median,40130,116,55.052976,110.556418,0.350021,30.000000,
+unseen_city_stress,validation,global_training_median,40130,116,72.368838,141.993294,-0.072179,41.000000,
+unseen_city_stress,validation,ridge,40130,116,45.318791,88.029013,0.587918,26.689278,
+unseen_city_stress,validation,xgboost,40130,116,35.519337,71.179487,0.730573,18.488338,799.000000

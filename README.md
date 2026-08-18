@@ -11,6 +11,8 @@ The first reproducible preparation slice is documented in [Analytics Slice 1](do
 
 Current listing-only analytics are available as machine-generated [findings](reports/findings.md), [summary data](reports/summary.json), and five aggregate figures under [`reports/figures/`](reports/figures/). No row-level data is published.
 
+The leakage-controlled asking-price regression is documented in [Modeling Slice 3 findings](reports/modeling_findings.md), with aggregate [model metrics](reports/model_metrics.csv) and [error slices](reports/model_error_slices.csv). Unit-price and platform-snapshot fields are excluded from model features.
+
 ## Portfolio Summary
 
 - Goal: build a data pipeline from web-crawled housing data to collateral value prediction.
@@ -117,6 +119,8 @@ Run the same preparation logic on the tracked synthetic fixture:
 ```bash
 python -m property_pledge.analytics_v1 --source synthetic
 python -m property_pledge.run_analytics --source synthetic
+python -m pip install -r requirements-modeling.txt
+python -m property_pledge.run_modeling --source synthetic
 python -m unittest discover -s tests -v
 ```
 
@@ -124,6 +128,7 @@ Generate the five aggregate analytics outputs from the private canonical analyti
 
 ```bash
 python -m property_pledge.run_analytics --source real
+python -m property_pledge.run_modeling --source real
 ```
 
 3. Historical notebook order:

@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from property_pledge.analytics_v1 import (
+from housing_analytics.analytics_v1 import (
     DEFAULT_SYNTHETIC_INPUT,
     load_synthetic_fixture,
     prepare_analytics_v1,
@@ -15,7 +15,7 @@ from property_pledge.analytics_v1 import (
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_MODEL_METRICS = REPOSITORY_ROOT / "reports/model_metrics.csv"
-from property_pledge.run_modeling import (
+from housing_analytics.run_modeling import (
     CATEGORICAL_FEATURES,
     FEATURE_COLUMNS,
     FORBIDDEN_FEATURES,

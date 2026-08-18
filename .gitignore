@@ -15,10 +15,6 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
-# Training artifacts
-code/catboost_info/
-doc/code/catboost_info/
-
 # Office temp files
 ~$*.docx
 ~$*.xlsx
@@ -27,19 +23,12 @@ doc/code/catboost_info/
 # Logs
 *.log
 
-# Private row-level data
+# Private inputs, derived row-level tables, split assignments, and predictions
 private_data/
-DataSet/*.csv
-DataSet/*.xlsx
-DataSet/**/*.csv
-DataSet/**/*.xlsx
-DataSet/**/*.json
-DataSet/**/*.jsonl
-DataSet/**/*.parquet
-DataSet/**/*.feather
-DataSet/**/*.arrow
 
-# Reviewed aggregate/reference tables retained in the public tree
-!DataSet/主要城市gdp.xlsx
-!DataSet/newHouse/链家新房城市页数表.xlsx
-!DataSet/newHouse - 2/链家新房城市页数表.xlsx
+# Local databases and model artifacts
+*.db
+*.sqlite
+*.sqlite3
+*.joblib
+*.pkl

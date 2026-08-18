@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/property-pledge/secondhand-analytics.schema.json",
+  "$id": "https://example.invalid/housing-data-analytics/secondhand-analytics.schema.json",
   "title": "Synthetic second-hand housing analytics record",
   "type": "object",
   "additionalProperties": false,

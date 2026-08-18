@@ -84,13 +84,13 @@ Real canonical snapshot:
 
 ```bash
 python -m pip install -r requirements-analytics.txt
-python -m property_pledge.analytics_v1 --source legacy --expect-canonical-lineage
+python -m housing_analytics.analytics_v1 --source legacy --expect-canonical-lineage
 ```
 
 Tracked synthetic fixture:
 
 ```bash
-python -m property_pledge.analytics_v1 --source synthetic
+python -m housing_analytics.analytics_v1 --source synthetic
 ```
 
 Tests:

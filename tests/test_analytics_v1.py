@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from property_pledge.analytics_v1 import (
+from housing_analytics.analytics_v1 import (
     DEFAULT_LEGACY_INPUT,
     DEFAULT_SYNTHETIC_INPUT,
     EXPECTED_CANONICAL_LINEAGE,

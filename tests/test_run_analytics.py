@@ -5,12 +5,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from property_pledge.analytics_v1 import (
+from housing_analytics.analytics_v1 import (
     DEFAULT_SYNTHETIC_INPUT,
     load_synthetic_fixture,
     prepare_analytics_v1,
 )
-from property_pledge.run_analytics import (
+from housing_analytics.run_analytics import (
     FORBIDDEN_SQL_TOKENS,
     PROPERTY_SEGMENT_DIMENSIONS,
     PUBLIC_OUTPUTS,

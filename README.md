@@ -1,154 +1,109 @@
-# Property Pledge Appraisement ML
+# Housing Data Analytics & Price Modeling
 
-Machine learning project for estimating real-estate pledge/collateral value in a commercial banking risk context.
+Reproducible analysis of a historical second-hand housing listing snapshot: sanitized acquisition evidence → deterministic data preparation → SQL analytics → leakage-controlled asking-price regression → error and city-holdout diagnostics.
 
-This repository is an archived graduation-era project (originally built around 2022).  
-I kept the original research assets and added portfolio-friendly documentation and English references.
+| Scope | Frozen evaluation | Geographic stress test |
+|---|---|---|
+| 267,305 listings across 135 cities | XGBoost MAE **35.96**, RMSE **76.72**, R² **0.749** | 19 unseen cities: MAE **84.51** (2.35×), R² **0.176** |
 
-Real listing-level datasets are not distributed in the current tree. See [Public Data Boundary](docs/public_data_boundary.md); public examples under `fixtures/` are fully synthetic.
+Prices and errors are in CNY 10,000 units. These are historical **asking prices**, not transactions, appraisals, collateral values, or lending-risk outcomes. The complete-city holdout is a robustness diagnostic, not proof of generalization to arbitrary new cities.
 
-The first reproducible preparation slice is documented in [Analytics Slice 1](docs/analytics_slice_1.md). It rebuilds the audited `300,397 -> 298,146 -> 267,305` lineage from a private canonical snapshot without training models or using incompletely sourced macro fields.
+## System flow
 
-Current listing-only analytics are available as machine-generated [findings](reports/findings.md), [summary data](reports/summary.json), and five aggregate figures under [`reports/figures/`](reports/figures/). No row-level data is published.
+```text
+Historical listing-card acquisition (sanitized evidence only)
+        ↓
+Legacy raw-to-canonical cleaning (partially documented boundary)
+        ↓
+Private 300,397-row canonical snapshot
+        ↓  invalid villa/floor rules + exact analytical deduplication
+Private 267,305-row analytical table
+        ├── SQLite: five fixed descriptive questions
+        │       └── aggregate summary, findings, and figures
+        └── deterministic train / validation / frozen-test evaluation
+                └── aggregate metrics, error slices, and city holdout
+```
 
-The leakage-controlled asking-price regression is documented in [Modeling Slice 3 findings](reports/modeling_findings.md), with aggregate [model metrics](reports/model_metrics.csv) and [error slices](reports/model_error_slices.csv). Unit-price and platform-snapshot fields are excluded from model features.
+Real row-level inputs, derived tables, split assignments, and predictions stay under ignored `private_data/`. The public repository contains code, invented fixtures, and aggregate outputs only.
 
-## Portfolio Summary
+## Analytical results
 
-- Goal: build a data pipeline from web-crawled housing data to collateral value prediction.
-- Domain focus: second-hand housing plus macro city features for bank lending risk analysis.
-- Main modeling families: Random Forest, GBDT, XGBoost, LightGBM, CatBoost, and Stacking.
-- Data collection cutoff (original project): `2022-11-27`.
+- The snapshot covers 267,305 listings and 135 cities; city counts describe collection coverage, not market size.
+- Asking prices are right-skewed: median 105.0 versus mean 145.8, with P10/P90 of 49.8/268.0.
+- In a 60–90 m², 2–3-room comparison, published city medians still range from 3,822 to 54,545 CNY/m² (groups require n ≥ 100); neighborhood and building composition remain uncontrolled.
+- 99.2% of platform unit prices differ from `asking price / area` by no more than 1 CNY/m². The platform and calculated unit-price fields are therefore excluded from modeling as target-derived leakage.
 
-## Key Results (from saved notebook outputs)
+See the machine-generated [analytics findings](reports/findings.md), [summary JSON](reports/summary.json), and [figures](reports/figures/).
 
-Representative test-set metrics captured in notebooks:
+## Leakage-controlled modeling
 
-- Nationwide/new-house style pipeline (`code/Modelling.ipynb`)
-  - XGBoost test: `RMSE 6104.62`, `MAE 3903.14`, `R² 0.59`, `MAPE 29.00%`.
-- Second-hand-house main pipeline (`code/Modelling_secondHand.ipynb`)
-  - XGBoost test: `RMSE 72.36`, `MAE 38.46`, `R² 0.72`, `MAPE 28.04%`.
-  - LightGBM test: `RMSE 70.31`, `MAE 36.76`, `MAPE 26.13%`.
-  - Stacking (meta-model) test snapshots include: `RMSE 52.91`, `MAE 27.81`, `MAPE 21.68%`.
+Target: `asking_total_price_10k_cny`.
 
-Notes:
-- Metrics are reported exactly as stored in historical notebook outputs.
-- Some old experiments may contain leakage or overfit behavior; treat the stack results as exploratory unless revalidated.
+Features: `city_id`, rooms, halls, area, primary orientation, furnishing, floor category, total floors, and building type. Preprocessing is fit on training rows only. Target quantile bins are used only for deterministic split assignment; validation is used for the fixed XGBoost early-stopping boundary; the frozen test does not influence preprocessing, feature selection, or hyperparameters.
 
-## Historical Data Snapshot
+| Model | Frozen-test MAE | RMSE | R² | Median AE |
+|---|---:|---:|---:|---:|
+| Global training median | 75.87 | 158.40 | -0.069 | 41.20 |
+| City training median | 56.63 | 124.18 | 0.343 | 30.20 |
+| Ridge | 47.19 | 97.29 | 0.597 | 28.41 |
+| XGBoost | **35.96** | **76.72** | **0.749** | **18.76** |
 
-From legacy cleaning notes and committed historical outputs (the row-level files are now private):
+Errors are not uniform. For XGBoost, the 500+ asking-price bucket has MAE 245.28 and median absolute percentage error 27.6% (n=1,044); the 144+ m² bucket has MAE 76.14 (n=5,251). Under the separate complete-city holdout, XGBoost degrades to MAE 84.51, RMSE 199.12, and R² 0.176 across 39,967 rows.
 
-- Raw merged records: `394,081`.
-- After rule-based filtering + de-duplication: `267,305` unique records.
-- Example training split artifacts:
-  - `DataSet/training/train_data_second.csv` -> `43,817` rows
-  - `DataSet/training/test_data_second.csv` -> `18,781` rows (including header line in row-count)
+See [modeling findings](reports/modeling_findings.md), [metrics](reports/model_metrics.csv), and [error slices](reports/model_error_slices.csv).
 
-Main feature groups include:
-- Property attributes: rooms, halls, area, orientation, furnishing, floor level, building structure.
-- Platform snapshot fields: follower count and encoded listing age.
-- City/macro variables: GDP, region, green coverage, urban population, built-up area, water resources.
-- Text-derived tags: tax benefit, transit convenience, nearby business district, water view, parking, lighting, park proximity.
+## Historical acquisition evidence
 
-## Repository Structure
+The original project discovered city sites, paginated `/ershoufang/pg{page}/`, parsed six listing-card fields, and produced per-city raw tables. The large notebooks and copied outputs were removed from the current tree because they mixed absolute paths, stale experiments, third-party content, and unverifiable artifacts.
 
-- `code/`: core notebooks for crawling, cleaning, feature engineering, model training, and stacking.
-- `DataSet/`: retained aggregate/reference tables and data notes; no real listing-level tables in the current tree.
-- `fixtures/`: synthetic schema and invented records for public validation examples.
-- `runProcess/`: selected figures/docs from model workflow.
-- `docs/`: added English helper docs for portfolio readability.
+[`housing_analytics/acquisition.py`](housing_analytics/acquisition.py) retains a tested offline URL/parser boundary without network access, proxy logic, TLS bypasses, or live-site reliability claims. The remaining acquisition-to-canonical gap is documented in [Historical Acquisition Boundary](docs/acquisition_history.md).
 
-## Visualizations
+## Reproduce
 
-Target distribution (`t_price`) comparison for train vs test:
-
-![Target distribution train vs test](assets/figures/generated/doc_t_price_distribution_train_vs_test.svg)
-
-Top 10 absolute correlations with target (`t_price`) from training split:
-
-![Top 10 absolute correlations with target](assets/figures/generated/doc_top10_abs_corr_with_t_price.svg)
-
-Binary tag mean rates:
-
-![Binary tag mean rates](assets/figures/generated/doc_binary_tag_mean_rates.svg)
-
-Single-training learning curves (second-hand data):
-
-![Single-training learning curves](assets/figures/docx_selected/second_hand_single_training_learning_curves.png)
-
-Cross-validation learning curves (second-hand data):
-
-![Cross-validation learning curves](assets/figures/docx_selected/second_hand_cross_validation_learning_curves.png)
-
-Model metric comparison (RMSE and MAPE):
-
-![Model metric comparison RMSE and MAPE](assets/figures/docx_selected/model_metric_comparison_rmse_mape.png)
-
-Model metric comparison (Explained Variance):
-
-![Model metric comparison EV](assets/figures/docx_selected/model_metric_comparison_ev.png)
-
-## Quick Start
-
-1. Create environment:
+Create an environment:
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-2. Launch notebooks:
-
-```bash
-jupyter lab
-```
-
-The notebooks preserve historical absolute paths and require separately supplied private data; the public synthetic fixture is a schema example, not a drop-in replacement for every legacy notebook.
-
-Prepare the private Analytics v1 table:
-
-```bash
-python -m pip install -r requirements-analytics.txt
-python -m property_pledge.analytics_v1 --source legacy --expect-canonical-lineage
-```
-
-Run the same preparation logic on the tracked synthetic fixture:
-
-```bash
-python -m property_pledge.analytics_v1 --source synthetic
-python -m property_pledge.run_analytics --source synthetic
 python -m pip install -r requirements-modeling.txt
-python -m property_pledge.run_modeling --source synthetic
+```
+
+Run the preparation, analytics, and modeling path with invented tracked input:
+
+```bash
+python -m housing_analytics.analytics_v1 --source synthetic
+python -m housing_analytics.run_analytics --source synthetic
+python -m housing_analytics.run_modeling --source synthetic
 python -m unittest discover -s tests -v
 ```
 
-Generate the five aggregate analytics outputs from the private canonical analytical table:
+With the audited private canonical snapshot in place:
 
 ```bash
-python -m property_pledge.run_analytics --source real
-python -m property_pledge.run_modeling --source real
+python -m housing_analytics.analytics_v1 --source legacy --expect-canonical-lineage
+python -m housing_analytics.run_analytics --source real
+python -m housing_analytics.run_modeling --source real
 ```
 
-3. Historical notebook order:
-- `code/crawlData.ipynb`
-- `code/cleanData.ipynb`
-- `code/Modelling_secondHand.ipynb`
-- `code/Modelling.ipynb`
+The frozen test has already been disclosed. It must not be used for further tuning.
 
-## Chinese -> English Aids
+## Repository structure
 
-To keep original files intact while improving readability:
+```text
+housing_analytics/   preparation, analytics runner, modeling evaluation, acquisition evidence
+analytics/sql/       five fixed descriptive SQL question sets
+fixtures/            schema plus invented row-level test data
+tests/               schema, lineage, leakage, split, output, and synthetic-path tests
+reports/             aggregate analytics/modeling results and figures
+docs/                data contract, public boundary, and acquisition limitations
+private_data/        ignored real inputs, derived rows, splits, and predictions
+```
 
-- English-translated notes:
-  - `DataSet/data_description_en.txt`
-  - `DataSet/data_cleaning_log_en.txt`
-  - `DataSet/random_forest_notes_en.txt`
-- File/folder translation map:
-  - `docs/file_name_translation_zh_to_en.md`
-- English alias copies for key files:
-  - `code/lianjia_city_pagecount_output.ipynb`
-  - `runProcess/decision_tree_feature_selection_part.png`
-  - `runProcess/decision_tree_feature_selection.pdf`
-  - `runProcess/random_forest_sklearn_output.docx`
+Detailed preparation rules and the `300,397 → 298,146 → 267,305` lineage are in [Analytics Slice 1](docs/analytics_slice_1.md). Data-release constraints are in [Public Data Boundary](docs/public_data_boundary.md).
+
+## Limitations
+
+- The snapshot is historical platform listing data, not a probability sample or a time-based evaluation.
+- The raw acquisition-to-19-column canonical transformation is not fully reproducible from retained evidence.
+- One deterministic frozen split does not establish performance stability across time or sources.
+- The city holdout is deliberately labeled a stress test; it does not prove new-city generalization.

@@ -1,15 +1,15 @@
 # Public Data Boundary
 
-This repository preserves legacy code, notebooks, documentation, and aggregate figures, but does not publish row-level housing records in the current tree.
+This repository publishes reproducible code, documentation, synthetic fixtures, and aggregate analytical/modeling outputs. It does not publish real row-level housing records in the current tree.
 
 ## Boundary
 
 The following are public:
 
-- legacy notebooks and scripts;
-- documentation and data dictionaries;
-- aggregate/reference tables explicitly listed below;
-- aggregate charts and historical model-output artifacts;
+- the canonical preparation, analytics, and evaluation code under `housing_analytics/`;
+- fixed SQL questions under `analytics/sql/`;
+- generated aggregate reports and figures under `reports/`;
+- acquisition-boundary documentation and a sanitized offline parser;
 - fully synthetic fixtures under `fixtures/`.
 
 The following are private:
@@ -18,19 +18,13 @@ The following are private:
 - per-city raw exports;
 - merged or cleaned listing-level tables;
 - modeling matrices and train/test files derived from real listings;
-- any future row-level CSV, XLSX, JSON, JSONL, Parquet, Feather, or Arrow file under `DataSet/`.
+- any real row-level CSV, XLSX, JSON, JSONL, Parquet, Feather, Arrow, split-assignment, or prediction file.
 
-The current-tree cleanup removes 632 tracked row-level CSV/XLSX files. It does **not** rewrite Git history. Those files remain recoverable from older commits until a separately reviewed history-rewrite operation is performed.
+An earlier current-tree cleanup removed 632 tracked row-level CSV/XLSX paths. It did **not** rewrite Git history. Those paths remain recoverable from older commits until a separately reviewed history-rewrite operation is performed.
 
 ## Private canonical input
 
-The selected input for a future analytics pipeline is the historical file:
-
-```text
-DataSet/合并二手房量化前数据.csv
-```
-
-It is preserved locally at the ignored path:
+The selected private canonical input is preserved locally at the ignored path:
 
 ```text
 private_data/canonical/secondhand_legacy_pre_encoding.csv
@@ -59,7 +53,7 @@ Known limitations:
 - it contains 30,944 exact duplicate rows at this stage;
 - listing titles and community/location strings remain third-party row-level content and must stay private.
 
-A future pipeline should accept this path through configuration, for example `PROPERTY_PLEDGE_CANONICAL_INPUT`, rather than hard-code a repository-relative data path.
+The current pipeline uses this explicit repository-local private boundary by default and also accepts an input path on the command line.
 
 ## Public synthetic contract
 
@@ -69,22 +63,16 @@ The fixture deliberately excludes free-text listing titles, community/developer 
 
 Synthetic values are examples only. They must not be used as analytical evidence or model results.
 
-## Retained aggregate/reference tables
+## Removed reference data
 
-These three files are retained because they contain city-level aggregates rather than property/listing rows:
-
-- `DataSet/主要城市gdp.xlsx`
-- `DataSet/newHouse/链家新房城市页数表.xlsx`
-- `DataSet/newHouse - 2/链家新房城市页数表.xlsx`
-
-Retention is not a blanket license determination. Before relying on them in a new pipeline, add exact source URLs, retrieval dates, definitions, and reuse terms. If that provenance cannot be established, replace them with documented public-source extracts or synthetic equivalents.
+The remaining city GDP and new-house page-count workbooks were removed from the current tree. Their exact source URLs, retrieval dates, definitions, and reuse terms were not established, and the canonical listing-only pipeline does not require them.
 
 ## Release checks
 
 Before committing future changes:
 
 1. `git status --short` must show no files under `private_data/`.
-2. No real row-level table may be added under `DataSet/`.
+2. No real row-level table, split assignment, or prediction may be added outside ignored `private_data/`.
 3. Public fixtures must contain only invented values and must validate against the schema.
 4. Aggregate outputs must be checked for small-cell disclosure and source/license requirements.
 5. A current-tree deletion must not be described as removal from Git history.

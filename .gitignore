@@ -27,3 +27,19 @@ doc/code/catboost_info/
 # Logs
 *.log
 
+# Private row-level data
+private_data/
+DataSet/*.csv
+DataSet/*.xlsx
+DataSet/**/*.csv
+DataSet/**/*.xlsx
+DataSet/**/*.json
+DataSet/**/*.jsonl
+DataSet/**/*.parquet
+DataSet/**/*.feather
+DataSet/**/*.arrow
+
+# Reviewed aggregate/reference tables retained in the public tree
+!DataSet/主要城市gdp.xlsx
+!DataSet/newHouse/链家新房城市页数表.xlsx
+!DataSet/newHouse - 2/链家新房城市页数表.xlsx

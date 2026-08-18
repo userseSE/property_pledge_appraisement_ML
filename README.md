@@ -5,6 +5,8 @@ Machine learning project for estimating real-estate pledge/collateral value in a
 This repository is an archived graduation-era project (originally built around 2022).  
 I kept the original research assets and added portfolio-friendly documentation and English references.
 
+Real listing-level datasets are not distributed in the current tree. See [Public Data Boundary](docs/public_data_boundary.md); public examples under `fixtures/` are fully synthetic.
+
 ## Portfolio Summary
 
 - Goal: build a data pipeline from web-crawled housing data to collateral value prediction.
@@ -27,9 +29,9 @@ Notes:
 - Metrics are reported exactly as stored in historical notebook outputs.
 - Some old experiments may contain leakage or overfit behavior; treat the stack results as exploratory unless revalidated.
 
-## Data Snapshot
+## Historical Data Snapshot
 
-From legacy cleaning notes:
+From legacy cleaning notes and committed historical outputs (the row-level files are now private):
 
 - Raw merged records: `394,081`.
 - After rule-based filtering + de-duplication: `267,305` unique records.
@@ -46,9 +48,9 @@ Main feature groups include:
 ## Repository Structure
 
 - `code/`: core notebooks for crawling, cleaning, feature engineering, model training, and stacking.
-- `DataSet/`: raw/intermediate/final datasets.
+- `DataSet/`: retained aggregate/reference tables and data notes; no real listing-level tables in the current tree.
+- `fixtures/`: synthetic schema and invented records for public validation examples.
 - `runProcess/`: selected figures/docs from model workflow.
-- `doc/`: historical thesis materials (contains personal/private files; not recommended for public release).
 - `docs/`: added English helper docs for portfolio readability.
 
 ## Visualizations
@@ -97,18 +99,13 @@ pip install -r requirements.txt
 jupyter lab
 ```
 
-Optional: regenerate dataset-driven SVG charts from `doc` data:
+The notebooks preserve historical absolute paths and require separately supplied private data; the public synthetic fixture is a schema example, not a drop-in replacement for every legacy notebook.
 
-```bash
-python3 scripts/generate_portfolio_charts.py
-```
-
-3. Suggested notebook order:
+3. Historical notebook order:
 - `code/crawlData.ipynb`
 - `code/cleanData.ipynb`
 - `code/Modelling_secondHand.ipynb`
 - `code/Modelling.ipynb`
-- `code/stacking_model_chatgpt.ipynb` (optional quick stacking demo)
 
 ## Chinese -> English Aids
 

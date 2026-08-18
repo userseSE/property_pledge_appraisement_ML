@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/property-pledge/secondhand-analytics.schema.json",
+  "title": "Synthetic second-hand housing analytics record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "synthetic",
+    "city_code",
+    "region",
+    "rooms",
+    "halls",
+    "area_sqm",
+    "orientation_primary",
+    "furnishing",
+    "floor_level",
+    "total_floors",
+    "building_type",
+    "villa_type",
+    "follower_count",
+    "listing_age_days",
+    "asking_total_price_10k_cny",
+    "asking_unit_price_cny_sqm",
+    "city_gdp_100m_cny",
+    "city_green_rate_pct"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^SYN-[0-9]{4}$"
+    },
+    "synthetic": {
+      "const": true
+    },
+    "city_code": {
+      "type": "string",
+      "pattern": "^SYN_CITY_[A-Z]+$"
+    },
+    "region": {
+      "type": "string",
+      "enum": [
+        "northeast",
+        "north",
+        "east",
+        "northwest",
+        "southwest",
+        "central_south"
+      ]
+    },
+    "rooms": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 20
+    },
+    "halls": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "area_sqm": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 2000
+    },
+    "orientation_primary": {
+      "type": "string",
+      "enum": ["east", "south", "west", "north", "other"]
+    },
+    "furnishing": {
+      "type": "string",
+      "enum": ["other", "unfinished", "simple", "decorated"]
+    },
+    "floor_level": {
+      "type": ["string", "null"],
+      "enum": ["basement", "bottom", "low", "middle", "high", "top", null]
+    },
+    "total_floors": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 200
+    },
+    "building_type": {
+      "type": "string",
+      "enum": ["bungalow", "slab", "slab_tower", "tower", "other"]
+    },
+    "villa_type": {
+      "type": ["string", "null"],
+      "enum": ["detached", "semi_detached", "townhouse", "stacked", null]
+    },
+    "follower_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "listing_age_days": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "asking_total_price_10k_cny": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "asking_unit_price_cny_sqm": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "city_gdp_100m_cny": {
+      "type": "number",
+      "minimum": 0
+    },
+    "city_green_rate_pct": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    }
+  }
+}

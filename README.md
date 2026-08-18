@@ -1,109 +1,140 @@
-# Housing Data Analytics & Price Modeling
+# Housing Price Intelligence for Collateral Valuation Support
 
-Reproducible analysis of a historical second-hand housing listing snapshot: sanitized acquisition evidence → deterministic data preparation → SQL analytics → leakage-controlled asking-price regression → error and city-holdout diagnostics.
+**An end-to-end housing market analytics and price-modeling system designed to provide scalable market-price evidence for residential collateral appraisal.**
 
-| Scope | Frozen evaluation | Geographic stress test |
+Built from **~394K historical residential listings collected across 135 cities**, the project combines multi-city web acquisition, deterministic data preparation, SQL market analytics, leakage-controlled regression, and geographic stress testing. The refreshed analytical pipeline operates on **267,305 second-hand listings** and estimates asking-price references from property and city characteristics.
+
+| Data scale | Predictive performance | Geographic stress test |
 |---|---|---|
-| 267,305 listings across 135 cities | XGBoost MAE **35.96**, RMSE **76.72**, R² **0.749** | 19 unseen cities: MAE **84.51** (2.35×), R² **0.176** |
+| **~394K collected → 267,305 analytical listings** | XGBoost MAE **35.96**, **36.5% lower** than the city-median baseline; R² **0.749** | 19 unseen cities: MAE **84.51** (**2.35×**) |
 
-Prices and errors are in CNY 10,000 units. These are historical **asking prices**, not transactions, appraisals, collateral values, or lending-risk outcomes. The complete-city holdout is a robustness diagnostic, not proof of generalization to arbitrary new cities.
+The model provides a market-price reference for valuation support rather than a certified appraisal value.
 
-## System flow
+## 1. Business Context
+
+Residential collateral appraisal depends on consistent local housing-market evidence. Manual comparable-property analysis becomes difficult to scale across many cities, property segments, and price levels.
+
+This project builds a data-driven valuation-support layer: acquire a broad listing snapshot, convert it into structured market evidence, estimate an asking-price reference, and identify cases where automated estimates are least reliable and professional review matters most.
+
+## 2. What I Built
+
+| Layer | Implementation | Evidence |
+|---|---|---|
+| Data acquisition | Custom historical multi-city listing collection and card-parsing workflow | ~394K collected records across 135 cities; [acquisition boundary](docs/acquisition_history.md) |
+| Data quality | Deterministic filtering, categorical normalization, and analytical deduplication | `300,397 → 298,146 → 267,305` reproducible preparation lineage |
+| Market analytics | SQLite/SQL and Python analysis across five fixed business questions | [aggregate findings](reports/findings.md) and [summary JSON](reports/summary.json) |
+| Price modeling | Leakage-controlled city-median, Ridge, and XGBoost evaluation | 40,104-row frozen test; [model metrics](reports/model_metrics.csv) |
+| Reliability analysis | Segment-level error slicing and complete-city holdout | 39,967 listings from 19 held-out cities; [error slices](reports/model_error_slices.csv) |
+
+## 3. End-to-End Pipeline
 
 ```text
-Historical listing-card acquisition (sanitized evidence only)
+Historical multi-city listing acquisition (~394K)
         ↓
-Legacy raw-to-canonical cleaning (partially documented boundary)
+Data cleaning & quality controls
         ↓
-Private 300,397-row canonical snapshot
-        ↓  invalid villa/floor rules + exact analytical deduplication
-Private 267,305-row analytical table
-        ├── SQLite: five fixed descriptive questions
-        │       └── aggregate summary, findings, and figures
-        └── deterministic train / validation / frozen-test evaluation
-                └── aggregate metrics, error slices, and city holdout
+267,305 analytical listings
+        ↓
+SQL market analytics
+        ↓
+Leakage-controlled price modeling
+        ↓
+Segment error + geographic stress testing
+        ↓
+Market-price reference for collateral valuation support
 ```
 
-Real row-level inputs, derived tables, split assignments, and predictions stay under ignored `private_data/`. The public repository contains code, invented fixtures, and aggregate outputs only.
+## 4. Market Intelligence
 
-## Analytical results
+The analytical layer answers five fixed questions covering market coverage, price distributions, property segments, city structure, and platform-observed listing signals.
 
-- The snapshot covers 267,305 listings and 135 cities; city counts describe collection coverage, not market size.
-- Asking prices are right-skewed: median 105.0 versus mean 145.8, with P10/P90 of 49.8/268.0.
-- In a 60–90 m², 2–3-room comparison, published city medians still range from 3,822 to 54,545 CNY/m² (groups require n ≥ 100); neighborhood and building composition remain uncontrolled.
-- 99.2% of platform unit prices differ from `asking price / area` by no more than 1 CNY/m². The platform and calculated unit-price fields are therefore excluded from modeling as target-derived leakage.
+- **Asking prices are strongly right-skewed.** Median total asking price is 105.0 versus a mean of 145.8, with P10/P90 of 49.8/268.0 in CNY 10,000 units.
+- **City price structure remains highly heterogeneous within a narrower segment.** For 60–90 m², 2–3-room listings, eligible city median unit prices range from 3,822 to 54,545 CNY/m² (groups require n ≥ 100).
+- **Area changes total and unit-price structure differently.** Median total asking price rises from 52.5 in the <60 m² segment to 185.0 in the 144+ m² segment, while median unit price is not monotonic across area buckets.
+- **A data-quality check exposed model leakage risk.** For 99.2% of rows, platform unit price differs from `asking price / area` by no more than 1 CNY/m². Both platform and calculated unit-price fields are therefore excluded from modeling as target-derived leakage.
 
-See the machine-generated [analytics findings](reports/findings.md), [summary JSON](reports/summary.json), and [figures](reports/figures/).
+![Historical asking-price distributions](reports/figures/price_distribution.png)
 
-## Leakage-controlled modeling
+Detailed definitions and limitations are generated in [Analytics v1 Findings](reports/findings.md).
 
-Target: `asking_total_price_10k_cny`.
+## 5. Valuation-Support Price Model
 
-Features: `city_id`, rooms, halls, area, primary orientation, furnishing, floor category, total floors, and building type. Preprocessing is fit on training rows only. Target quantile bins are used only for deterministic split assignment; validation is used for the fixed XGBoost early-stopping boundary; the frozen test does not influence preprocessing, feature selection, or hyperparameters.
+The target is historical asking total price. Errors below are reported in CNY 10,000 units on the frozen test set.
 
-| Model | Frozen-test MAE | RMSE | R² | Median AE |
+| Model | MAE | RMSE | R² | Median AE |
 |---|---:|---:|---:|---:|
 | Global training median | 75.87 | 158.40 | -0.069 | 41.20 |
 | City training median | 56.63 | 124.18 | 0.343 | 30.20 |
 | Ridge | 47.19 | 97.29 | 0.597 | 28.41 |
 | XGBoost | **35.96** | **76.72** | **0.749** | **18.76** |
 
-Errors are not uniform. For XGBoost, the 500+ asking-price bucket has MAE 245.28 and median absolute percentage error 27.6% (n=1,044); the 144+ m² bucket has MAE 76.14 (n=5,251). Under the separate complete-city holdout, XGBoost degrades to MAE 84.51, RMSE 199.12, and R² 0.176 across 39,967 rows.
+**XGBoost reduced MAE by 36.5% relative to the city-median reference.**
 
-See [modeling findings](reports/modeling_findings.md), [metrics](reports/model_metrics.csv), and [error slices](reports/model_error_slices.csv).
+Only nine property/location features enter the models: `city_id`, `rooms`, `halls`, `area_sqm`, `orientation_primary`, `furnishing`, `floor_level`, `total_floors`, and `building_type`. Target-derived unit-price fields, price buckets, identifiers, platform signals, macro fields, and title flags are excluded.
 
-## Historical acquisition evidence
+![Frozen-test model comparison](reports/figures/model_comparison.png)
 
-The original project discovered city sites, paginated `/ershoufang/pg{page}/`, parsed six listing-card fields, and produced per-city raw tables. The large notebooks and copied outputs were removed from the current tree because they mixed absolute paths, stale experiments, third-party content, and unverifiable artifacts.
+## 6. Where Automated Valuation Needs Human Review
 
-[`housing_analytics/acquisition.py`](housing_analytics/acquisition.py) retains a tested offline URL/parser boundary without network access, proxy logic, TLS bypasses, or live-site reliability claims. The remaining acquisition-to-canonical gap is documented in [Historical Acquisition Boundary](docs/acquisition_history.md).
+Aggregate performance hides material reliability differences across segments:
 
-## Reproduce
+- **High-value listings:** the 500+ asking-price bucket has MAE 245.28 and median absolute percentage error 27.6% (n=1,044).
+- **Large properties:** the 144+ m² bucket has MAE 76.14 (n=5,251).
+- **Geographic shift:** complete-city holdout increases XGBoost MAE from 35.96 to 84.51, a 2.35× degradation.
+- **Largest city holdout error:** Xiamen has MAE 536.22 on 2,298 listings. Mean signed error is -536.22 and median signed error is -387.31, showing strong systematic underestimation in this held-out city.
 
-Create an environment:
+These diagnostics suggest a natural valuation-support boundary: use model estimates as market references for covered property segments, while unusual, high-value, or geographically unfamiliar cases warrant stronger manual appraisal.
+
+![Complete-city holdout stress test](reports/figures/unseen_city_stress.png)
+
+See the complete [Modeling Slice 3 Findings](reports/modeling_findings.md) and machine-readable [error slices](reports/model_error_slices.csv).
+
+## 7. Evaluation Design
+
+- One deterministic split assigns 187,089 rows to training, 40,112 to validation, and 40,104 to the frozen test; target quantile bins are used only for split assignment.
+- Numeric scaling and categorical encoding are fit on training data only; unseen categories are handled without refitting.
+- The same nine-feature allowlist is enforced for every model, with target-derived price fields explicitly excluded.
+- Validation is reserved for XGBoost early-stopping monitoring; early stopping did not trigger within the configured 800 rounds.
+- The frozen test was disclosed only after fitting, and no further model tuning occurred.
+- A separate stress test holds out 19 complete cities from preprocessing, model fitting, and validation monitoring.
+- Legitimate extreme observations remain in their assigned splits rather than being removed to improve metrics.
+
+## 8. Reproducibility & Data Boundary
+
+Real third-party row-level listings are not redistributed. The public repository provides the complete preparation/analytics/modeling code, synthetic fixtures, aggregate findings, metrics, and figures. Real inputs, derived rows, split assignments, and predictions remain under ignored `private_data/`.
+
+Historical acquisition evidence is retained in the tested offline [`housing_analytics/acquisition.py`](housing_analytics/acquisition.py) module. It preserves the listing-card URL/parser boundary without performing live network collection.
+
+Run the public synthetic path:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-modeling.txt
-```
-
-Run the preparation, analytics, and modeling path with invented tracked input:
-
-```bash
 python -m housing_analytics.analytics_v1 --source synthetic
 python -m housing_analytics.run_analytics --source synthetic
 python -m housing_analytics.run_modeling --source synthetic
 python -m unittest discover -s tests -v
 ```
 
-With the audited private canonical snapshot in place:
+The real-data preparation contract and row-count lineage are documented in [Analytics Slice 1](docs/analytics_slice_1.md). Release constraints are documented in [Public Data Boundary](docs/public_data_boundary.md).
 
-```bash
-python -m housing_analytics.analytics_v1 --source legacy --expect-canonical-lineage
-python -m housing_analytics.run_analytics --source real
-python -m housing_analytics.run_modeling --source real
-```
-
-The frozen test has already been disclosed. It must not be used for further tuning.
-
-## Repository structure
+## 9. Repository Structure
 
 ```text
-housing_analytics/   preparation, analytics runner, modeling evaluation, acquisition evidence
-analytics/sql/       five fixed descriptive SQL question sets
-fixtures/            schema plus invented row-level test data
-tests/               schema, lineage, leakage, split, output, and synthetic-path tests
-reports/             aggregate analytics/modeling results and figures
-docs/                data contract, public boundary, and acquisition limitations
+housing_analytics/   acquisition evidence, preparation, analytics, and model evaluation
+analytics/sql/       five fixed market-analysis question sets
+fixtures/            schema and invented row-level test data
+tests/               lineage, leakage, split, output, and synthetic-path tests
+reports/             aggregate market intelligence, metrics, error slices, and figures
+docs/                data contract, acquisition history, and public-data boundary
 private_data/        ignored real inputs, derived rows, splits, and predictions
 ```
 
-Detailed preparation rules and the `300,397 → 298,146 → 267,305` lineage are in [Analytics Slice 1](docs/analytics_slice_1.md). Data-release constraints are in [Public Data Boundary](docs/public_data_boundary.md).
+## 10. Scope & Valuation Boundaries
 
-## Limitations
-
-- The snapshot is historical platform listing data, not a probability sample or a time-based evaluation.
-- The raw acquisition-to-19-column canonical transformation is not fully reproducible from retained evidence.
-- One deterministic frozen split does not establish performance stability across time or sources.
-- The city holdout is deliberately labeled a stress test; it does not prove new-city generalization.
+- The target is historical asking price: a market-reference signal for valuation support, not a certified appraisal.
+- The historical collection is not a probability sample or a temporal evaluation.
+- The city holdout demonstrates geographic distribution shift but does not prove arbitrary new-city generalization.
+- The original raw-to-canonical historical transformation is only partially recoverable from retained evidence.
+- Raw third-party row-level records are not redistributed.

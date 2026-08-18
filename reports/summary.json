@@ -1,0 +1,6450 @@
+{
+  "metadata": {
+    "minimum_group_size": 100,
+    "price_basis": "historical asking prices, not transaction prices",
+    "question_count": 5,
+    "schema_version": "1.0.0",
+    "source_file": "secondhand_analytics_v1.csv",
+    "source_sha256": "2d8ce4f90d7e63d0dfbcfb6054f87f72a8b3da34cdf0f806d37389f25142f64a"
+  },
+  "q1_market_coverage": {
+    "area_distribution": [
+      {
+        "area_interval": "lt_40",
+        "sample_count": 3352,
+        "sort_order": 0
+      },
+      {
+        "area_interval": "40_to_lt_50",
+        "sample_count": 6192,
+        "sort_order": 40
+      },
+      {
+        "area_interval": "50_to_lt_60",
+        "sample_count": 9892,
+        "sort_order": 50
+      },
+      {
+        "area_interval": "60_to_lt_70",
+        "sample_count": 12362,
+        "sort_order": 60
+      },
+      {
+        "area_interval": "70_to_lt_80",
+        "sample_count": 16955,
+        "sort_order": 70
+      },
+      {
+        "area_interval": "80_to_lt_90",
+        "sample_count": 36431,
+        "sort_order": 80
+      },
+      {
+        "area_interval": "90_to_lt_100",
+        "sample_count": 34386,
+        "sort_order": 90
+      },
+      {
+        "area_interval": "100_to_lt_110",
+        "sample_count": 24926,
+        "sort_order": 100
+      },
+      {
+        "area_interval": "110_to_lt_120",
+        "sample_count": 25991,
+        "sort_order": 110
+      },
+      {
+        "area_interval": "120_to_lt_130",
+        "sample_count": 28933,
+        "sort_order": 120
+      },
+      {
+        "area_interval": "130_to_lt_140",
+        "sample_count": 23734,
+        "sort_order": 130
+      },
+      {
+        "area_interval": "140_to_lt_150",
+        "sample_count": 15903,
+        "sort_order": 140
+      },
+      {
+        "area_interval": "150_to_lt_160",
+        "sample_count": 6683,
+        "sort_order": 150
+      },
+      {
+        "area_interval": "160_to_lt_170",
+        "sample_count": 5203,
+        "sort_order": 160
+      },
+      {
+        "area_interval": "170_to_lt_180",
+        "sample_count": 3572,
+        "sort_order": 170
+      },
+      {
+        "area_interval": "180_to_lt_190",
+        "sample_count": 2757,
+        "sort_order": 180
+      },
+      {
+        "area_interval": "190_to_lt_200",
+        "sample_count": 1949,
+        "sort_order": 190
+      },
+      {
+        "area_interval": "200_plus",
+        "sample_count": 8084,
+        "sort_order": 200
+      }
+    ],
+    "city_sample_count_distribution": {
+      "maximum": 2751.0,
+      "mean": 1980.037,
+      "median": 2186.0,
+      "minimum": 122.0,
+      "p10": 925.0,
+      "p25": 1757.0,
+      "p75": 2393.0,
+      "p90": 2481.0,
+      "sample_count": 135
+    },
+    "coverage_statistics": {
+      "area_sqm": {
+        "iqr": 43.54,
+        "maximum": 10732.0,
+        "mean": 110.5974,
+        "median": 105.58,
+        "minimum": 11.1,
+        "p10": 65.94,
+        "p25": 86.46,
+        "p75": 130.0,
+        "p90": 151.79,
+        "sample_count": 267305
+      },
+      "asking_total_price_10k_cny": {
+        "iqr": 94.0,
+        "maximum": 8880.0,
+        "mean": 145.8324,
+        "median": 105.0,
+        "minimum": 1.0,
+        "p10": 49.8,
+        "p25": 71.0,
+        "p75": 165.0,
+        "p90": 268.0,
+        "sample_count": 267305
+      },
+      "halls": {
+        "iqr": 1.0,
+        "maximum": 12.0,
+        "mean": 1.7328,
+        "median": 2.0,
+        "minimum": 0.0,
+        "p10": 1.0,
+        "p25": 1.0,
+        "p75": 2.0,
+        "p90": 2.0,
+        "sample_count": 267305
+      },
+      "rooms": {
+        "iqr": 1.0,
+        "maximum": 20.0,
+        "mean": 2.8518,
+        "median": 3.0,
+        "minimum": 0.0,
+        "p10": 2.0,
+        "p25": 2.0,
+        "p75": 3.0,
+        "p90": 4.0,
+        "sample_count": 267305
+      }
+    },
+    "long_tail": {
+      "city_count": 120,
+      "listing_count": 228936,
+      "listing_share": 0.8565
+    },
+    "overview": {
+      "city_count": 135,
+      "listing_count": 267305,
+      "max_area_sqm": 10732.0,
+      "max_asking_total_price_10k_cny": 8880.0,
+      "max_halls": 12,
+      "max_rooms": 20,
+      "min_area_sqm": 11.1,
+      "min_asking_total_price_10k_cny": 1.0,
+      "min_halls": 0,
+      "min_rooms": 0
+    },
+    "room_hall_configurations": [
+      {
+        "halls": 2,
+        "rooms": 3,
+        "sample_count": 113319
+      },
+      {
+        "halls": 2,
+        "rooms": 2,
+        "sample_count": 37252
+      },
+      {
+        "halls": 1,
+        "rooms": 2,
+        "sample_count": 34609
+      },
+      {
+        "halls": 2,
+        "rooms": 4,
+        "sample_count": 32307
+      },
+      {
+        "halls": 1,
+        "rooms": 3,
+        "sample_count": 22834
+      },
+      {
+        "halls": 1,
+        "rooms": 1,
+        "sample_count": 10506
+      },
+      {
+        "halls": 2,
+        "rooms": 5,
+        "sample_count": 5393
+      },
+      {
+        "halls": 1,
+        "rooms": 4,
+        "sample_count": 2735
+      },
+      {
+        "halls": 0,
+        "rooms": 1,
+        "sample_count": 1808
+      },
+      {
+        "halls": 3,
+        "rooms": 5,
+        "sample_count": 1375
+      },
+      {
+        "halls": 3,
+        "rooms": 4,
+        "sample_count": 986
+      },
+      {
+        "halls": 2,
+        "rooms": 6,
+        "sample_count": 919
+      },
+      {
+        "halls": 2,
+        "rooms": 1,
+        "sample_count": 551
+      },
+      {
+        "halls": 3,
+        "rooms": 6,
+        "sample_count": 516
+      },
+      {
+        "halls": 1,
+        "rooms": 5,
+        "sample_count": 447
+      },
+      {
+        "halls": 3,
+        "rooms": 3,
+        "sample_count": 342
+      },
+      {
+        "halls": 0,
+        "rooms": 2,
+        "sample_count": 304
+      },
+      {
+        "halls": 2,
+        "rooms": 7,
+        "sample_count": 157
+      },
+      {
+        "halls": 4,
+        "rooms": 6,
+        "sample_count": 119
+      },
+      {
+        "halls": 3,
+        "rooms": 7,
+        "sample_count": 108
+      }
+    ],
+    "top_cities": [
+      {
+        "city_id": "北海",
+        "sample_count": 2751
+      },
+      {
+        "city_id": "赤峰",
+        "sample_count": 2653
+      },
+      {
+        "city_id": "长春",
+        "sample_count": 2626
+      },
+      {
+        "city_id": "哈尔滨",
+        "sample_count": 2625
+      },
+      {
+        "city_id": "烟台",
+        "sample_count": 2568
+      },
+      {
+        "city_id": "汉中",
+        "sample_count": 2545
+      },
+      {
+        "city_id": "徐州",
+        "sample_count": 2535
+      },
+      {
+        "city_id": "济南",
+        "sample_count": 2535
+      },
+      {
+        "city_id": "丹东",
+        "sample_count": 2533
+      },
+      {
+        "city_id": "吉林",
+        "sample_count": 2520
+      },
+      {
+        "city_id": "太原",
+        "sample_count": 2517
+      },
+      {
+        "city_id": "呼和浩特",
+        "sample_count": 2499
+      },
+      {
+        "city_id": "石家庄",
+        "sample_count": 2494
+      },
+      {
+        "city_id": "潍坊",
+        "sample_count": 2487
+      },
+      {
+        "city_id": "常州",
+        "sample_count": 2481
+      }
+    ]
+  },
+  "q2_price_distribution": {
+    "log_scale_distribution": {
+      "asking_total_price_10k_cny": [
+        {
+          "bin_index": 22,
+          "lower_bound": 12.5893,
+          "sample_count": 170,
+          "upper_bound": 14.1254
+        },
+        {
+          "bin_index": 23,
+          "lower_bound": 14.1254,
+          "sample_count": 192,
+          "upper_bound": 15.8489
+        },
+        {
+          "bin_index": 24,
+          "lower_bound": 15.8489,
+          "sample_count": 296,
+          "upper_bound": 17.7828
+        },
+        {
+          "bin_index": 25,
+          "lower_bound": 17.7828,
+          "sample_count": 541,
+          "upper_bound": 19.9526
+        },
+        {
+          "bin_index": 26,
+          "lower_bound": 19.9526,
+          "sample_count": 789,
+          "upper_bound": 22.3872
+        },
+        {
+          "bin_index": 27,
+          "lower_bound": 22.3872,
+          "sample_count": 1107,
+          "upper_bound": 25.1189
+        },
+        {
+          "bin_index": 28,
+          "lower_bound": 25.1189,
+          "sample_count": 1539,
+          "upper_bound": 28.1838
+        },
+        {
+          "bin_index": 29,
+          "lower_bound": 28.1838,
+          "sample_count": 2034,
+          "upper_bound": 31.6228
+        },
+        {
+          "bin_index": 30,
+          "lower_bound": 31.6228,
+          "sample_count": 3131,
+          "upper_bound": 35.4813
+        },
+        {
+          "bin_index": 31,
+          "lower_bound": 35.4813,
+          "sample_count": 4312,
+          "upper_bound": 39.8107
+        },
+        {
+          "bin_index": 32,
+          "lower_bound": 39.8107,
+          "sample_count": 5309,
+          "upper_bound": 44.6684
+        },
+        {
+          "bin_index": 33,
+          "lower_bound": 44.6684,
+          "sample_count": 9114,
+          "upper_bound": 50.1187
+        },
+        {
+          "bin_index": 34,
+          "lower_bound": 50.1187,
+          "sample_count": 9427,
+          "upper_bound": 56.2341
+        },
+        {
+          "bin_index": 35,
+          "lower_bound": 56.2341,
+          "sample_count": 12472,
+          "upper_bound": 63.0957
+        },
+        {
+          "bin_index": 36,
+          "lower_bound": 63.0957,
+          "sample_count": 15836,
+          "upper_bound": 70.7946
+        },
+        {
+          "bin_index": 37,
+          "lower_bound": 70.7946,
+          "sample_count": 17148,
+          "upper_bound": 79.4328
+        },
+        {
+          "bin_index": 38,
+          "lower_bound": 79.4328,
+          "sample_count": 21029,
+          "upper_bound": 89.1251
+        },
+        {
+          "bin_index": 39,
+          "lower_bound": 89.1251,
+          "sample_count": 19854,
+          "upper_bound": 100.0
+        },
+        {
+          "bin_index": 40,
+          "lower_bound": 100.0,
+          "sample_count": 19753,
+          "upper_bound": 112.2018
+        },
+        {
+          "bin_index": 41,
+          "lower_bound": 112.2018,
+          "sample_count": 17885,
+          "upper_bound": 125.8925
+        },
+        {
+          "bin_index": 42,
+          "lower_bound": 125.8925,
+          "sample_count": 18118,
+          "upper_bound": 141.2538
+        },
+        {
+          "bin_index": 43,
+          "lower_bound": 141.2538,
+          "sample_count": 14697,
+          "upper_bound": 158.4893
+        },
+        {
+          "bin_index": 44,
+          "lower_bound": 158.4893,
+          "sample_count": 13340,
+          "upper_bound": 177.8279
+        },
+        {
+          "bin_index": 45,
+          "lower_bound": 177.8279,
+          "sample_count": 11552,
+          "upper_bound": 199.5262
+        },
+        {
+          "bin_index": 46,
+          "lower_bound": 199.5262,
+          "sample_count": 9141,
+          "upper_bound": 223.8721
+        },
+        {
+          "bin_index": 47,
+          "lower_bound": 223.8721,
+          "sample_count": 8127,
+          "upper_bound": 251.1886
+        },
+        {
+          "bin_index": 48,
+          "lower_bound": 251.1886,
+          "sample_count": 6254,
+          "upper_bound": 281.8383
+        },
+        {
+          "bin_index": 49,
+          "lower_bound": 281.8383,
+          "sample_count": 4880,
+          "upper_bound": 316.2278
+        },
+        {
+          "bin_index": 50,
+          "lower_bound": 316.2278,
+          "sample_count": 4019,
+          "upper_bound": 354.8134
+        },
+        {
+          "bin_index": 51,
+          "lower_bound": 354.8134,
+          "sample_count": 3365,
+          "upper_bound": 398.1072
+        },
+        {
+          "bin_index": 52,
+          "lower_bound": 398.1072,
+          "sample_count": 2599,
+          "upper_bound": 446.6836
+        },
+        {
+          "bin_index": 53,
+          "lower_bound": 446.6836,
+          "sample_count": 2217,
+          "upper_bound": 501.1872
+        },
+        {
+          "bin_index": 54,
+          "lower_bound": 501.1872,
+          "sample_count": 1567,
+          "upper_bound": 562.3413
+        },
+        {
+          "bin_index": 55,
+          "lower_bound": 562.3413,
+          "sample_count": 1296,
+          "upper_bound": 630.9573
+        },
+        {
+          "bin_index": 56,
+          "lower_bound": 630.9573,
+          "sample_count": 953,
+          "upper_bound": 707.9458
+        },
+        {
+          "bin_index": 57,
+          "lower_bound": 707.9458,
+          "sample_count": 735,
+          "upper_bound": 794.3282
+        },
+        {
+          "bin_index": 58,
+          "lower_bound": 794.3282,
+          "sample_count": 644,
+          "upper_bound": 891.2509
+        },
+        {
+          "bin_index": 59,
+          "lower_bound": 891.2509,
+          "sample_count": 418,
+          "upper_bound": 1000.0
+        },
+        {
+          "bin_index": 60,
+          "lower_bound": 1000.0,
+          "sample_count": 267,
+          "upper_bound": 1122.0185
+        },
+        {
+          "bin_index": 61,
+          "lower_bound": 1122.0185,
+          "sample_count": 260,
+          "upper_bound": 1258.9254
+        },
+        {
+          "bin_index": 62,
+          "lower_bound": 1258.9254,
+          "sample_count": 251,
+          "upper_bound": 1412.5375
+        },
+        {
+          "bin_index": 63,
+          "lower_bound": 1412.5375,
+          "sample_count": 143,
+          "upper_bound": 1584.8932
+        },
+        {
+          "bin_index": 64,
+          "lower_bound": 1584.8932,
+          "sample_count": 110,
+          "upper_bound": 1778.2794
+        }
+      ],
+      "calculated_unit_price_cny_sqm": [
+        {
+          "bin_index": 66,
+          "lower_bound": 1995.2623,
+          "sample_count": 103,
+          "upper_bound": 2238.7211
+        },
+        {
+          "bin_index": 67,
+          "lower_bound": 2238.7211,
+          "sample_count": 219,
+          "upper_bound": 2511.8864
+        },
+        {
+          "bin_index": 68,
+          "lower_bound": 2511.8864,
+          "sample_count": 442,
+          "upper_bound": 2818.3829
+        },
+        {
+          "bin_index": 69,
+          "lower_bound": 2818.3829,
+          "sample_count": 925,
+          "upper_bound": 3162.2777
+        },
+        {
+          "bin_index": 70,
+          "lower_bound": 3162.2777,
+          "sample_count": 1749,
+          "upper_bound": 3548.1339
+        },
+        {
+          "bin_index": 71,
+          "lower_bound": 3548.1339,
+          "sample_count": 3111,
+          "upper_bound": 3981.0717
+        },
+        {
+          "bin_index": 72,
+          "lower_bound": 3981.0717,
+          "sample_count": 5102,
+          "upper_bound": 4466.8359
+        },
+        {
+          "bin_index": 73,
+          "lower_bound": 4466.8359,
+          "sample_count": 7622,
+          "upper_bound": 5011.8723
+        },
+        {
+          "bin_index": 74,
+          "lower_bound": 5011.8723,
+          "sample_count": 11056,
+          "upper_bound": 5623.4133
+        },
+        {
+          "bin_index": 75,
+          "lower_bound": 5623.4133,
+          "sample_count": 15887,
+          "upper_bound": 6309.5734
+        },
+        {
+          "bin_index": 76,
+          "lower_bound": 6309.5734,
+          "sample_count": 20478,
+          "upper_bound": 7079.4578
+        },
+        {
+          "bin_index": 77,
+          "lower_bound": 7079.4578,
+          "sample_count": 22881,
+          "upper_bound": 7943.2823
+        },
+        {
+          "bin_index": 78,
+          "lower_bound": 7943.2823,
+          "sample_count": 23630,
+          "upper_bound": 8912.5094
+        },
+        {
+          "bin_index": 79,
+          "lower_bound": 8912.5094,
+          "sample_count": 22832,
+          "upper_bound": 10000.0
+        },
+        {
+          "bin_index": 80,
+          "lower_bound": 10000.0,
+          "sample_count": 21379,
+          "upper_bound": 11220.1845
+        },
+        {
+          "bin_index": 81,
+          "lower_bound": 11220.1845,
+          "sample_count": 18866,
+          "upper_bound": 12589.2541
+        },
+        {
+          "bin_index": 82,
+          "lower_bound": 12589.2541,
+          "sample_count": 16996,
+          "upper_bound": 14125.3754
+        },
+        {
+          "bin_index": 83,
+          "lower_bound": 14125.3754,
+          "sample_count": 14164,
+          "upper_bound": 15848.9319
+        },
+        {
+          "bin_index": 84,
+          "lower_bound": 15848.9319,
+          "sample_count": 12278,
+          "upper_bound": 17782.7941
+        },
+        {
+          "bin_index": 85,
+          "lower_bound": 17782.7941,
+          "sample_count": 9973,
+          "upper_bound": 19952.6231
+        },
+        {
+          "bin_index": 86,
+          "lower_bound": 19952.6231,
+          "sample_count": 8020,
+          "upper_bound": 22387.2114
+        },
+        {
+          "bin_index": 87,
+          "lower_bound": 22387.2114,
+          "sample_count": 6492,
+          "upper_bound": 25118.8643
+        },
+        {
+          "bin_index": 88,
+          "lower_bound": 25118.8643,
+          "sample_count": 5167,
+          "upper_bound": 28183.8293
+        },
+        {
+          "bin_index": 89,
+          "lower_bound": 28183.8293,
+          "sample_count": 3854,
+          "upper_bound": 31622.7766
+        },
+        {
+          "bin_index": 90,
+          "lower_bound": 31622.7766,
+          "sample_count": 2497,
+          "upper_bound": 35481.3389
+        },
+        {
+          "bin_index": 91,
+          "lower_bound": 35481.3389,
+          "sample_count": 2005,
+          "upper_bound": 39810.7171
+        },
+        {
+          "bin_index": 92,
+          "lower_bound": 39810.7171,
+          "sample_count": 1662,
+          "upper_bound": 44668.3592
+        },
+        {
+          "bin_index": 93,
+          "lower_bound": 44668.3592,
+          "sample_count": 1406,
+          "upper_bound": 50118.7234
+        },
+        {
+          "bin_index": 94,
+          "lower_bound": 50118.7234,
+          "sample_count": 1364,
+          "upper_bound": 56234.1325
+        },
+        {
+          "bin_index": 95,
+          "lower_bound": 56234.1325,
+          "sample_count": 1328,
+          "upper_bound": 63095.7344
+        },
+        {
+          "bin_index": 96,
+          "lower_bound": 63095.7344,
+          "sample_count": 1131,
+          "upper_bound": 70794.5784
+        },
+        {
+          "bin_index": 97,
+          "lower_bound": 70794.5784,
+          "sample_count": 895,
+          "upper_bound": 79432.8235
+        },
+        {
+          "bin_index": 98,
+          "lower_bound": 79432.8235,
+          "sample_count": 607,
+          "upper_bound": 89125.0938
+        },
+        {
+          "bin_index": 99,
+          "lower_bound": 89125.0938,
+          "sample_count": 463,
+          "upper_bound": 100000.0
+        },
+        {
+          "bin_index": 100,
+          "lower_bound": 100000.0,
+          "sample_count": 293,
+          "upper_bound": 112201.8454
+        },
+        {
+          "bin_index": 101,
+          "lower_bound": 112201.8454,
+          "sample_count": 158,
+          "upper_bound": 125892.5412
+        }
+      ]
+    },
+    "statistics": {
+      "asking_total_price_10k_cny": {
+        "iqr": 94.0,
+        "maximum": 8880.0,
+        "mean": 145.8324,
+        "median": 105.0,
+        "p10": 49.8,
+        "p25": 71.0,
+        "p75": 165.0,
+        "p90": 268.0,
+        "sample_count": 267305
+      },
+      "calculated_unit_price_cny_sqm": {
+        "iqr": 7855.99,
+        "maximum": 199680.51,
+        "mean": 13358.6248,
+        "median": 9873.17,
+        "p10": 5444.44,
+        "p25": 7080.05,
+        "p75": 14936.04,
+        "p90": 23465.7,
+        "sample_count": 267305
+      }
+    },
+    "unit_price_sanity": {
+      "above_100_cny_sqm": 316,
+      "above_1_percent": 6,
+      "max_absolute_difference_cny_sqm": 330.84,
+      "max_relative_difference": 0.0151,
+      "mean_absolute_difference_cny_sqm": 0.9623,
+      "median_absolute_difference_cny_sqm": 0.49,
+      "median_relative_difference": 0.0,
+      "p90_absolute_difference_cny_sqm": 0.9,
+      "p99_absolute_difference_cny_sqm": 1.0,
+      "p99_relative_difference": 0.0003,
+      "sample_count": 267305,
+      "share_above_100_cny_sqm": 0.0012,
+      "share_above_1_percent": 0.0,
+      "share_within_0_1_percent": 0.9958,
+      "share_within_1_cny_sqm": 0.9917,
+      "share_within_5_cny_sqm": 0.9921,
+      "within_0_1_percent": 266178,
+      "within_1_cny_sqm": 265086,
+      "within_5_cny_sqm": 265191
+    }
+  },
+  "q3_property_segments": {
+    "area_bucket": [
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 60.5,
+          "median": 52.5,
+          "p25": 34.5,
+          "p75": 95.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 12467.4,
+          "median": 10903.58,
+          "p25": 7142.86,
+          "p75": 19610.26
+        },
+        "sample_count": 19436,
+        "segment": "lt_60"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 73.2,
+          "median": 82.8,
+          "p25": 56.8,
+          "p75": 130.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9009.71,
+          "median": 10356.73,
+          "p25": 7272.73,
+          "p75": 16282.44
+        },
+        "sample_count": 65748,
+        "segment": "60_to_lt_90"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 73.0,
+          "median": 98.0,
+          "p25": 72.0,
+          "p75": 145.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6908.18,
+          "median": 9459.74,
+          "p25": 7009.35,
+          "p75": 13917.53
+        },
+        "sample_count": 85303,
+        "segment": "90_to_lt_120"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 90.0,
+          "median": 124.0,
+          "p25": 90.0,
+          "p75": 180.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6790.18,
+          "median": 9430.89,
+          "p25": 6923.25,
+          "p75": 13713.43
+        },
+        "sample_count": 62328,
+        "segment": "120_to_lt_144"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 175.0,
+          "median": 185.0,
+          "p25": 125.0,
+          "p75": 300.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8773.31,
+          "median": 10353.28,
+          "p25": 7334.07,
+          "p75": 16107.38
+        },
+        "sample_count": 34490,
+        "segment": "144_plus"
+      }
+    ],
+    "building_type": [
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 85.2,
+          "median": 92.0,
+          "p25": 62.8,
+          "p75": 148.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6369.23,
+          "median": 8273.23,
+          "p25": 6178.85,
+          "p75": 12548.08
+        },
+        "sample_count": 3369,
+        "segment": "bungalow"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 98.0,
+          "median": 106.0,
+          "p25": 70.0,
+          "p75": 168.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7886.22,
+          "median": 9907.12,
+          "p25": 7115.95,
+          "p75": 15002.17
+        },
+        "sample_count": 139309,
+        "segment": "slab"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 94.0,
+          "median": 108.0,
+          "p25": 72.0,
+          "p75": 166.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8144.98,
+          "median": 10000.0,
+          "p25": 7051.49,
+          "p75": 15196.47
+        },
+        "sample_count": 77817,
+        "segment": "slab_tower"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 88.0,
+          "median": 100.0,
+          "p25": 70.0,
+          "p75": 158.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7219.69,
+          "median": 9610.15,
+          "p25": 7111.11,
+          "p75": 14330.8
+        },
+        "sample_count": 46810,
+        "segment": "tower"
+      }
+    ],
+    "floor_level": [
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 344.0,
+          "median": 468.0,
+          "p25": 316.0,
+          "p75": 660.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 42415.6,
+          "median": 53941.33,
+          "p25": 42774.09,
+          "p75": 85189.69
+        },
+        "sample_count": 161,
+        "segment": "bottom"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 93.0,
+          "median": 103.0,
+          "p25": 69.0,
+          "p75": 162.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7474.84,
+          "median": 9408.03,
+          "p25": 6741.57,
+          "p75": 14216.41
+        },
+        "sample_count": 94604,
+        "segment": "high"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 99.0,
+          "median": 111.0,
+          "p25": 76.0,
+          "p75": 175.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8078.01,
+          "median": 10318.74,
+          "p25": 7476.64,
+          "p75": 15554.65
+        },
+        "sample_count": 72702,
+        "segment": "low"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 91.0,
+          "median": 104.0,
+          "p25": 70.0,
+          "p75": 161.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7908.2,
+          "median": 9929.08,
+          "p25": 7130.78,
+          "p75": 15038.98
+        },
+        "sample_count": 99633,
+        "segment": "middle"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 357.0,
+          "median": 420.0,
+          "p25": 258.0,
+          "p75": 615.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 43124.48,
+          "median": 52746.54,
+          "p25": 38176.33,
+          "p75": 81300.81
+        },
+        "sample_count": 173,
+        "segment": "top"
+      }
+    ],
+    "furnishing": [
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 105.2,
+          "median": 118.0,
+          "p25": 79.8,
+          "p75": 185.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9050.29,
+          "median": 11079.0,
+          "p25": 7926.5,
+          "p75": 16976.79
+        },
+        "sample_count": 117082,
+        "segment": "decorated"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 79.0,
+          "median": 96.0,
+          "p25": 67.0,
+          "p75": 146.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 5999.45,
+          "median": 8828.5,
+          "p25": 6617.37,
+          "p75": 12616.82
+        },
+        "sample_count": 42302,
+        "segment": "other"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 86.0,
+          "median": 87.5,
+          "p25": 57.0,
+          "p75": 143.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7849.12,
+          "median": 9072.58,
+          "p25": 6400.0,
+          "p75": 14249.12
+        },
+        "sample_count": 55874,
+        "segment": "simple"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 85.0,
+          "median": 106.0,
+          "p25": 75.0,
+          "p75": 160.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6488.13,
+          "median": 9098.54,
+          "p25": 6666.67,
+          "p75": 13154.8
+        },
+        "sample_count": 52047,
+        "segment": "unfinished"
+      }
+    ],
+    "halls": [
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 65.0,
+          "median": 48.0,
+          "p25": 30.0,
+          "p75": 95.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 12067.49,
+          "median": 10554.09,
+          "p25": 6888.63,
+          "p75": 18956.12
+        },
+        "sample_count": 2233,
+        "segment": "0"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 87.8,
+          "median": 85.0,
+          "p25": 55.0,
+          "p75": 142.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9338.54,
+          "median": 10338.75,
+          "p25": 7213.71,
+          "p75": 16552.25
+        },
+        "sample_count": 71289,
+        "segment": "1"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 92.0,
+          "median": 111.0,
+          "p25": 78.0,
+          "p75": 170.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7343.47,
+          "median": 9685.75,
+          "p25": 7036.08,
+          "p75": 14379.55
+        },
+        "sample_count": 189952,
+        "segment": "2"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 208.0,
+          "median": 200.0,
+          "p25": 130.0,
+          "p75": 338.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8900.54,
+          "median": 10449.32,
+          "p25": 7258.06,
+          "p75": 16158.6
+        },
+        "sample_count": 3435,
+        "segment": "3"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 247.0,
+          "median": 242.0,
+          "p25": 150.0,
+          "p75": 397.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 10379.98,
+          "median": 11428.57,
+          "p25": 7692.31,
+          "p75": 18072.29
+        },
+        "sample_count": 357,
+        "segment": "4"
+      }
+    ],
+    "orientation_primary": [
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 90.0,
+          "median": 96.0,
+          "p25": 66.0,
+          "p75": 156.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7637.25,
+          "median": 9375.0,
+          "p25": 6725.0,
+          "p75": 14362.25
+        },
+        "sample_count": 35682,
+        "segment": "east"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 87.5,
+          "median": 87.0,
+          "p25": 55.5,
+          "p75": 143.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8026.74,
+          "median": 9591.07,
+          "p25": 6619.72,
+          "p75": 14646.46
+        },
+        "sample_count": 8479,
+        "segment": "north"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 95.0,
+          "median": 108.0,
+          "p25": 73.0,
+          "p75": 168.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7822.26,
+          "median": 9940.07,
+          "p25": 7162.75,
+          "p75": 14985.01
+        },
+        "sample_count": 211616,
+        "segment": "south"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 91.0,
+          "median": 96.0,
+          "p25": 65.0,
+          "p75": 156.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8739.23,
+          "median": 10187.1,
+          "p25": 7083.33,
+          "p75": 15822.56
+        },
+        "sample_count": 11528,
+        "segment": "west"
+      }
+    ],
+    "rooms": [
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 56.0,
+          "median": 50.0,
+          "p25": 33.0,
+          "p75": 89.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 10702.64,
+          "median": 10344.83,
+          "p25": 6923.68,
+          "p75": 17626.32
+        },
+        "sample_count": 12871,
+        "segment": "1"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 65.0,
+          "median": 78.0,
+          "p25": 55.0,
+          "p75": 120.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7715.74,
+          "median": 9550.56,
+          "p25": 6881.38,
+          "p75": 14597.12
+        },
+        "sample_count": 72190,
+        "segment": "2"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 81.8,
+          "median": 110.0,
+          "p25": 79.0,
+          "p75": 160.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7276.12,
+          "median": 9607.84,
+          "p25": 7024.0,
+          "p75": 14300.12
+        },
+        "sample_count": 136574,
+        "segment": "3"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 138.0,
+          "median": 159.0,
+          "p25": 110.0,
+          "p75": 248.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8797.64,
+          "median": 10927.15,
+          "p25": 7746.48,
+          "p75": 16544.12
+        },
+        "sample_count": 36114,
+        "segment": "4"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 217.0,
+          "median": 220.0,
+          "p25": 143.0,
+          "p75": 360.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9975.9,
+          "median": 11497.01,
+          "p25": 7840.91,
+          "p75": 17816.81
+        },
+        "sample_count": 7320,
+        "segment": "5"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 248.0,
+          "median": 252.0,
+          "p25": 162.0,
+          "p75": 410.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 10000.42,
+          "median": 11565.5,
+          "p25": 7900.81,
+          "p75": 17901.23
+        },
+        "sample_count": 1651,
+        "segment": "6"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 318.5,
+          "median": 270.0,
+          "p25": 181.5,
+          "p75": 500.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 11849.34,
+          "median": 12641.51,
+          "p25": 8361.2,
+          "p75": 20210.54
+        },
+        "sample_count": 339,
+        "segment": "7"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 417.0,
+          "median": 340.0,
+          "p25": 198.0,
+          "p75": 615.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 12208.88,
+          "median": 12894.43,
+          "p25": 8561.64,
+          "p75": 20770.52
+        },
+        "sample_count": 135,
+        "segment": "8"
+      }
+    ],
+    "total_floors": [
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 430.0,
+          "median": 256.0,
+          "p25": 120.0,
+          "p75": 550.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 15742.05,
+          "median": 14814.81,
+          "p25": 10441.77,
+          "p75": 26183.82
+        },
+        "sample_count": 194,
+        "segment": "1"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 344.0,
+          "median": 260.0,
+          "p25": 146.0,
+          "p75": 490.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 16389.69,
+          "median": 16165.36,
+          "p25": 9754.77,
+          "p75": 26144.46
+        },
+        "sample_count": 300,
+        "segment": "2"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 378.0,
+          "median": 249.0,
+          "p25": 112.0,
+          "p75": 490.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 13415.87,
+          "median": 15231.4,
+          "p25": 9568.36,
+          "p75": 22984.23
+        },
+        "sample_count": 1086,
+        "segment": "3"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 151.0,
+          "median": 108.0,
+          "p25": 59.0,
+          "p75": 210.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9824.13,
+          "median": 10327.64,
+          "p25": 7334.96,
+          "p75": 17159.09
+        },
+        "sample_count": 2407,
+        "segment": "4"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 108.5,
+          "median": 98.0,
+          "p25": 59.5,
+          "p75": 168.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8745.95,
+          "median": 10095.89,
+          "p25": 6870.23,
+          "p75": 15616.18
+        },
+        "sample_count": 8643,
+        "segment": "5"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 82.0,
+          "median": 88.0,
+          "p25": 60.0,
+          "p75": 142.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7015.91,
+          "median": 8516.48,
+          "p25": 6215.59,
+          "p75": 13231.5
+        },
+        "sample_count": 40902,
+        "segment": "6"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 79.2,
+          "median": 83.0,
+          "p25": 55.8,
+          "p75": 135.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6529.89,
+          "median": 8024.91,
+          "p25": 5826.04,
+          "p75": 12355.93
+        },
+        "sample_count": 23690,
+        "segment": "7"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 90.76,
+          "median": 86.0,
+          "p25": 54.8,
+          "p75": 145.56
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7708.82,
+          "median": 8497.46,
+          "p25": 5804.69,
+          "p75": 13513.51
+        },
+        "sample_count": 7864,
+        "segment": "8"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 120.0,
+          "median": 116.0,
+          "p25": 70.0,
+          "p75": 190.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 10801.65,
+          "median": 10635.02,
+          "p25": 6860.69,
+          "p75": 17662.34
+        },
+        "sample_count": 4555,
+        "segment": "9"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 136.0,
+          "median": 130.0,
+          "p25": 79.0,
+          "p75": 215.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 11157.49,
+          "median": 11324.5,
+          "p25": 7406.74,
+          "p75": 18564.23
+        },
+        "sample_count": 2361,
+        "segment": "10"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 105.0,
+          "median": 124.8,
+          "p25": 85.0,
+          "p75": 190.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8269.55,
+          "median": 10846.15,
+          "p25": 7817.41,
+          "p75": 16086.96
+        },
+        "sample_count": 13172,
+        "segment": "11"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 106.0,
+          "median": 115.0,
+          "p25": 76.0,
+          "p75": 182.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7920.34,
+          "median": 9715.37,
+          "p25": 6907.08,
+          "p75": 14827.42
+        },
+        "sample_count": 3721,
+        "segment": "12"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 116.0,
+          "median": 113.0,
+          "p25": 73.0,
+          "p75": 189.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9789.19,
+          "median": 10416.67,
+          "p25": 7266.02,
+          "p75": 17055.21
+        },
+        "sample_count": 1798,
+        "segment": "13"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 128.0,
+          "median": 125.0,
+          "p25": 80.0,
+          "p75": 208.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 10900.44,
+          "median": 11656.61,
+          "p25": 7871.93,
+          "p75": 18772.37
+        },
+        "sample_count": 1950,
+        "segment": "14"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 107.1,
+          "median": 118.5,
+          "p25": 77.9,
+          "p75": 185.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9188.71,
+          "median": 11060.55,
+          "p25": 7703.31,
+          "p75": 16892.02
+        },
+        "sample_count": 3706,
+        "segment": "15"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 107.5,
+          "median": 117.8,
+          "p25": 77.5,
+          "p75": 185.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8719.39,
+          "median": 10719.64,
+          "p25": 7564.02,
+          "p75": 16283.41
+        },
+        "sample_count": 5125,
+        "segment": "16"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 93.0,
+          "median": 109.0,
+          "p25": 75.0,
+          "p75": 168.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7298.04,
+          "median": 9806.06,
+          "p25": 7192.98,
+          "p75": 14491.02
+        },
+        "sample_count": 9081,
+        "segment": "17"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 82.0,
+          "median": 109.0,
+          "p25": 78.0,
+          "p75": 160.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6990.86,
+          "median": 10088.59,
+          "p25": 7455.37,
+          "p75": 14446.23
+        },
+        "sample_count": 22804,
+        "segment": "18"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 92.0,
+          "median": 95.0,
+          "p25": 63.0,
+          "p75": 155.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7583.01,
+          "median": 9272.73,
+          "p25": 6718.92,
+          "p75": 14301.93
+        },
+        "sample_count": 2500,
+        "segment": "19"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 108.0,
+          "median": 112.0,
+          "p25": 75.0,
+          "p75": 183.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9362.08,
+          "median": 11869.57,
+          "p25": 7942.51,
+          "p75": 17304.59
+        },
+        "sample_count": 2767,
+        "segment": "20"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 100.0,
+          "median": 108.0,
+          "p25": 70.0,
+          "p75": 170.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8612.69,
+          "median": 10406.26,
+          "p25": 7369.05,
+          "p75": 15981.74
+        },
+        "sample_count": 2379,
+        "segment": "21"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 97.0,
+          "median": 115.0,
+          "p25": 78.0,
+          "p75": 175.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8582.2,
+          "median": 10845.38,
+          "p25": 7692.31,
+          "p75": 16274.51
+        },
+        "sample_count": 3283,
+        "segment": "22"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 93.0,
+          "median": 108.0,
+          "p25": 72.0,
+          "p75": 165.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7572.88,
+          "median": 9945.28,
+          "p25": 7244.9,
+          "p75": 14817.78
+        },
+        "sample_count": 3251,
+        "segment": "23"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 96.0,
+          "median": 115.0,
+          "p25": 79.0,
+          "p75": 175.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8299.72,
+          "median": 10752.69,
+          "p25": 7666.67,
+          "p75": 15966.39
+        },
+        "sample_count": 5433,
+        "segment": "24"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 100.2,
+          "median": 110.0,
+          "p25": 75.8,
+          "p75": 176.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8166.44,
+          "median": 10117.73,
+          "p25": 7428.57,
+          "p75": 15595.01
+        },
+        "sample_count": 5981,
+        "segment": "25"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 83.0,
+          "median": 105.0,
+          "p25": 75.0,
+          "p75": 158.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6976.88,
+          "median": 9557.73,
+          "p25": 7250.0,
+          "p75": 14226.88
+        },
+        "sample_count": 8849,
+        "segment": "26"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 82.0,
+          "median": 110.0,
+          "p25": 78.0,
+          "p75": 160.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7367.13,
+          "median": 10052.12,
+          "p25": 7538.9,
+          "p75": 14906.03
+        },
+        "sample_count": 6593,
+        "segment": "27"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 84.2,
+          "median": 105.0,
+          "p25": 73.8,
+          "p75": 158.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6991.36,
+          "median": 9756.45,
+          "p25": 7164.93,
+          "p75": 14156.29
+        },
+        "sample_count": 7038,
+        "segment": "28"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 104.0,
+          "median": 112.0,
+          "p25": 76.0,
+          "p75": 180.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7889.36,
+          "median": 10000.0,
+          "p25": 7552.27,
+          "p75": 15441.63
+        },
+        "sample_count": 4734,
+        "segment": "29"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 96.0,
+          "median": 112.0,
+          "p25": 79.0,
+          "p75": 175.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7288.06,
+          "median": 10103.38,
+          "p25": 7533.39,
+          "p75": 14821.45
+        },
+        "sample_count": 7911,
+        "segment": "30"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 98.0,
+          "median": 115.0,
+          "p25": 79.0,
+          "p75": 177.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7766.67,
+          "median": 10253.52,
+          "p25": 7500.0,
+          "p75": 15266.67
+        },
+        "sample_count": 7249,
+        "segment": "31"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 87.0,
+          "median": 112.0,
+          "p25": 80.0,
+          "p75": 167.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7239.4,
+          "median": 10221.03,
+          "p25": 7640.45,
+          "p75": 14879.85
+        },
+        "sample_count": 14511,
+        "segment": "32"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 79.0,
+          "median": 111.0,
+          "p25": 81.0,
+          "p75": 160.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6912.12,
+          "median": 10230.75,
+          "p25": 7700.51,
+          "p75": 14612.63
+        },
+        "sample_count": 18967,
+        "segment": "33"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 78.0,
+          "median": 120.0,
+          "p25": 88.0,
+          "p75": 166.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7578.41,
+          "median": 11595.25,
+          "p25": 8644.07,
+          "p75": 16222.48
+        },
+        "sample_count": 8587,
+        "segment": "34"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 135.5,
+          "median": 135.0,
+          "p25": 83.0,
+          "p75": 218.5
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 12202.88,
+          "median": 13605.44,
+          "p25": 9657.59,
+          "p75": 21860.47
+        },
+        "sample_count": 645,
+        "segment": "35"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 218.0,
+          "median": 200.0,
+          "p25": 140.0,
+          "p75": 358.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 14548.99,
+          "median": 17679.94,
+          "p25": 13238.59,
+          "p75": 27787.58
+        },
+        "sample_count": 227,
+        "segment": "36"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 210.0,
+          "median": 201.0,
+          "p25": 140.0,
+          "p75": 350.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 15975.4,
+          "median": 16463.41,
+          "p25": 12468.25,
+          "p75": 28443.65
+        },
+        "sample_count": 236,
+        "segment": "37"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 180.95,
+          "median": 175.0,
+          "p25": 107.0,
+          "p75": 287.95
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 11186.14,
+          "median": 14756.2,
+          "p25": 11262.84,
+          "p75": 22448.98
+        },
+        "sample_count": 408,
+        "segment": "38"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 175.99,
+          "median": 185.0,
+          "p25": 124.0,
+          "p75": 299.99
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 11675.78,
+          "median": 16488.22,
+          "p25": 11463.68,
+          "p75": 23139.46
+        },
+        "sample_count": 328,
+        "segment": "39"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 145.0,
+          "median": 165.0,
+          "p25": 120.0,
+          "p75": 265.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 12090.09,
+          "median": 14783.53,
+          "p25": 10704.03,
+          "p75": 22794.12
+        },
+        "sample_count": 345,
+        "segment": "40"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 204.0,
+          "median": 220.0,
+          "p25": 141.0,
+          "p75": 345.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 16707.56,
+          "median": 21212.12,
+          "p25": 14223.87,
+          "p75": 30931.43
+        },
+        "sample_count": 187,
+        "segment": "41"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 130.0,
+          "median": 196.0,
+          "p25": 129.0,
+          "p75": 259.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 11976.04,
+          "median": 17128.57,
+          "p25": 11573.6,
+          "p75": 23549.64
+        },
+        "sample_count": 154,
+        "segment": "42"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 160.5,
+          "median": 155.0,
+          "p25": 98.8,
+          "p75": 259.3
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 10678.04,
+          "median": 12395.35,
+          "p25": 9734.51,
+          "p75": 20412.55
+        },
+        "sample_count": 156,
+        "segment": "43"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 113.0,
+          "median": 169.0,
+          "p25": 122.0,
+          "p75": 235.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9813.63,
+          "median": 13808.03,
+          "p25": 10039.66,
+          "p75": 19853.29
+        },
+        "sample_count": 213,
+        "segment": "44"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 210.0,
+          "median": 183.0,
+          "p25": 80.0,
+          "p75": 290.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 14419.09,
+          "median": 15053.36,
+          "p25": 8211.14,
+          "p75": 22630.23
+        },
+        "sample_count": 203,
+        "segment": "45"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 191.0,
+          "median": 170.0,
+          "p25": 109.0,
+          "p75": 300.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 11431.81,
+          "median": 15034.97,
+          "p25": 11694.92,
+          "p75": 23126.73
+        },
+        "sample_count": 122,
+        "segment": "46"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 338.0,
+          "median": 198.0,
+          "p25": 120.0,
+          "p75": 458.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 17751.25,
+          "median": 15973.35,
+          "p25": 11131.28,
+          "p75": 28882.53
+        },
+        "sample_count": 147,
+        "segment": "47"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 215.0,
+          "median": 165.0,
+          "p25": 80.0,
+          "p75": 295.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 16248.63,
+          "median": 13968.25,
+          "p25": 8421.05,
+          "p75": 24669.68
+        },
+        "sample_count": 137,
+        "segment": "48"
+      },
+      {
+        "asking_total_price_10k_cny": {
+          "iqr": 163.0,
+          "median": 160.0,
+          "p25": 112.0,
+          "p75": 275.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 11368.51,
+          "median": 14580.71,
+          "p25": 10157.44,
+          "p75": 21525.95
+        },
+        "sample_count": 117,
+        "segment": "49"
+      }
+    ]
+  },
+  "q4_city_price_structure": {
+    "all_listings": [
+      {
+        "area_sqm": {
+          "iqr": 30.77,
+          "median": 89.0,
+          "p25": 81.23,
+          "p75": 112.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 29.5,
+          "median": 50.0,
+          "p25": 38.5,
+          "p75": 68.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2242.97,
+          "median": 5473.03,
+          "p25": 4484.3,
+          "p75": 6727.27
+        },
+        "city_id": "北海",
+        "sample_count": 2751
+      },
+      {
+        "area_sqm": {
+          "iqr": 40.79,
+          "median": 109.11,
+          "p25": 89.99,
+          "p75": 130.78
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 42.0,
+          "median": 82.0,
+          "p25": 63.0,
+          "p75": 105.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 1952.28,
+          "median": 7476.64,
+          "p25": 6536.83,
+          "p75": 8489.11
+        },
+        "city_id": "赤峰",
+        "sample_count": 2653
+      },
+      {
+        "area_sqm": {
+          "iqr": 39.23,
+          "median": 91.68,
+          "p25": 77.0,
+          "p75": 116.23
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 53.0,
+          "median": 85.0,
+          "p25": 62.0,
+          "p75": 115.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2828.17,
+          "median": 8918.62,
+          "p25": 7642.49,
+          "p75": 10470.66
+        },
+        "city_id": "长春",
+        "sample_count": 2626
+      },
+      {
+        "area_sqm": {
+          "iqr": 46.57,
+          "median": 82.96,
+          "p25": 60.0,
+          "p75": 106.57
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 47.8,
+          "median": 62.0,
+          "p25": 42.0,
+          "p75": 89.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3262.43,
+          "median": 7692.31,
+          "p25": 6179.78,
+          "p75": 9442.21
+        },
+        "city_id": "哈尔滨",
+        "sample_count": 2625
+      },
+      {
+        "area_sqm": {
+          "iqr": 40.89,
+          "median": 99.54,
+          "p25": 84.87,
+          "p75": 125.76
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 65.0,
+          "median": 100.0,
+          "p25": 75.0,
+          "p75": 140.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4008.02,
+          "median": 9908.22,
+          "p25": 8241.98,
+          "p75": 12250.0
+        },
+        "city_id": "烟台",
+        "sample_count": 2568
+      },
+      {
+        "area_sqm": {
+          "iqr": 40.85,
+          "median": 117.0,
+          "p25": 94.15,
+          "p75": 135.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 41.5,
+          "median": 59.9,
+          "p25": 43.5,
+          "p75": 85.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2397.13,
+          "median": 5308.91,
+          "p25": 4243.71,
+          "p75": 6640.84
+        },
+        "city_id": "汉中",
+        "sample_count": 2545
+      },
+      {
+        "area_sqm": {
+          "iqr": 34.69,
+          "median": 103.17,
+          "p25": 88.1,
+          "p75": 122.79
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 77.0,
+          "median": 133.0,
+          "p25": 100.0,
+          "p75": 177.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 5281.35,
+          "median": 12755.52,
+          "p25": 10532.26,
+          "p75": 15813.61
+        },
+        "city_id": "徐州",
+        "sample_count": 2535
+      },
+      {
+        "area_sqm": {
+          "iqr": 40.35,
+          "median": 102.03,
+          "p25": 86.65,
+          "p75": 127.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 105.0,
+          "median": 160.0,
+          "p25": 118.0,
+          "p75": 223.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7270.49,
+          "median": 15216.36,
+          "p25": 12650.75,
+          "p75": 19921.24
+        },
+        "city_id": "济南",
+        "sample_count": 2535
+      },
+      {
+        "area_sqm": {
+          "iqr": 52.81,
+          "median": 97.69,
+          "p25": 72.0,
+          "p75": 124.81
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 51.9,
+          "median": 64.0,
+          "p25": 41.8,
+          "p75": 93.7
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3177.76,
+          "median": 6444.44,
+          "p25": 5225.23,
+          "p75": 8402.99
+        },
+        "city_id": "丹东",
+        "sample_count": 2533
+      },
+      {
+        "area_sqm": {
+          "iqr": 42.94,
+          "median": 106.75,
+          "p25": 87.06,
+          "p75": 130.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 49.5,
+          "median": 78.0,
+          "p25": 55.5,
+          "p75": 105.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2451.4,
+          "median": 7347.5,
+          "p25": 6181.69,
+          "p75": 8633.09
+        },
+        "city_id": "吉林",
+        "sample_count": 2520
+      },
+      {
+        "area_sqm": {
+          "iqr": 57.12,
+          "median": 99.64,
+          "p25": 79.59,
+          "p75": 136.71
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 66.0,
+          "median": 99.5,
+          "p25": 72.0,
+          "p75": 138.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3167.87,
+          "median": 9473.52,
+          "p25": 8082.13,
+          "p75": 11250.0
+        },
+        "city_id": "太原",
+        "sample_count": 2517
+      },
+      {
+        "area_sqm": {
+          "iqr": 57.96,
+          "median": 107.0,
+          "p25": 81.05,
+          "p75": 139.01
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 77.0,
+          "median": 107.0,
+          "p25": 72.0,
+          "p75": 149.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3543.27,
+          "median": 9813.08,
+          "p25": 8214.85,
+          "p75": 11758.12
+        },
+        "city_id": "呼和浩特",
+        "sample_count": 2499
+      },
+      {
+        "area_sqm": {
+          "iqr": 50.63,
+          "median": 104.28,
+          "p25": 85.0,
+          "p75": 135.63
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 86.0,
+          "median": 132.0,
+          "p25": 99.0,
+          "p75": 185.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4851.51,
+          "median": 12962.96,
+          "p25": 10983.8,
+          "p75": 15835.31
+        },
+        "city_id": "石家庄",
+        "sample_count": 2494
+      },
+      {
+        "area_sqm": {
+          "iqr": 40.61,
+          "median": 113.35,
+          "p25": 93.88,
+          "p75": 134.49
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 44.1,
+          "median": 78.0,
+          "p25": 59.9,
+          "p75": 104.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2285.19,
+          "median": 7020.2,
+          "p25": 5937.74,
+          "p75": 8222.93
+        },
+        "city_id": "潍坊",
+        "sample_count": 2487
+      },
+      {
+        "area_sqm": {
+          "iqr": 46.59,
+          "median": 112.88,
+          "p25": 89.64,
+          "p75": 136.23
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 107.0,
+          "median": 186.0,
+          "p25": 145.0,
+          "p75": 252.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6022.07,
+          "median": 17000.0,
+          "p25": 14170.4,
+          "p75": 20192.47
+        },
+        "city_id": "常州",
+        "sample_count": 2481
+      },
+      {
+        "area_sqm": {
+          "iqr": 41.46,
+          "median": 107.92,
+          "p25": 88.54,
+          "p75": 130.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 69.8,
+          "median": 110.0,
+          "p25": 80.0,
+          "p75": 149.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 5482.41,
+          "median": 10294.71,
+          "p25": 8097.84,
+          "p75": 13580.25
+        },
+        "city_id": "咸阳",
+        "sample_count": 2472
+      },
+      {
+        "area_sqm": {
+          "iqr": 44.9,
+          "median": 110.0,
+          "p25": 88.0,
+          "p75": 132.9
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 68.0,
+          "median": 79.0,
+          "p25": 52.0,
+          "p75": 120.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3475.37,
+          "median": 7353.81,
+          "p25": 5696.3,
+          "p75": 9171.67
+        },
+        "city_id": "银川",
+        "sample_count": 2466
+      },
+      {
+        "area_sqm": {
+          "iqr": 35.58,
+          "median": 89.09,
+          "p25": 76.42,
+          "p75": 112.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 57.0,
+          "median": 84.0,
+          "p25": 62.0,
+          "p75": 119.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4408.56,
+          "median": 9336.23,
+          "p25": 7548.72,
+          "p75": 11957.28
+        },
+        "city_id": "沈阳",
+        "sample_count": 2459
+      },
+      {
+        "area_sqm": {
+          "iqr": 36.68,
+          "median": 77.14,
+          "p25": 55.68,
+          "p75": 92.36
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 83.0,
+          "median": 99.0,
+          "p25": 67.0,
+          "p75": 150.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7952.66,
+          "median": 13561.64,
+          "p25": 10233.32,
+          "p75": 18185.98
+        },
+        "city_id": "大连",
+        "sample_count": 2455
+      },
+      {
+        "area_sqm": {
+          "iqr": 33.55,
+          "median": 94.08,
+          "p25": 83.5,
+          "p75": 117.05
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 98.0,
+          "median": 148.0,
+          "p25": 107.0,
+          "p75": 205.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7533.56,
+          "median": 15813.66,
+          "p25": 12197.38,
+          "p75": 19730.94
+        },
+        "city_id": "武汉",
+        "sample_count": 2451
+      },
+      {
+        "area_sqm": {
+          "iqr": 52.06,
+          "median": 116.0,
+          "p25": 88.5,
+          "p75": 140.56
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 85.0,
+          "median": 102.0,
+          "p25": 65.0,
+          "p75": 150.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4021.37,
+          "median": 8982.52,
+          "p25": 7033.91,
+          "p75": 11055.28
+        },
+        "city_id": "洛阳",
+        "sample_count": 2447
+      },
+      {
+        "area_sqm": {
+          "iqr": 35.74,
+          "median": 108.0,
+          "p25": 89.89,
+          "p75": 125.63
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 60.0,
+          "median": 113.0,
+          "p25": 85.0,
+          "p75": 145.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3975.35,
+          "median": 10528.95,
+          "p25": 8588.75,
+          "p75": 12564.1
+        },
+        "city_id": "中山",
+        "sample_count": 2445
+      },
+      {
+        "area_sqm": {
+          "iqr": 41.14,
+          "median": 87.95,
+          "p25": 66.64,
+          "p75": 107.78
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 193.0,
+          "median": 238.0,
+          "p25": 166.0,
+          "p75": 359.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 18325.19,
+          "median": 28185.02,
+          "p25": 21327.01,
+          "p75": 39652.2
+        },
+        "city_id": "南京",
+        "sample_count": 2441
+      },
+      {
+        "area_sqm": {
+          "iqr": 36.07,
+          "median": 72.52,
+          "p25": 54.52,
+          "p75": 90.59
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 265.0,
+          "median": 379.0,
+          "p25": 275.0,
+          "p75": 540.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 28330.15,
+          "median": 59555.22,
+          "p25": 44053.8,
+          "p75": 72383.95
+        },
+        "city_id": "上海",
+        "sample_count": 2431
+      },
+      {
+        "area_sqm": {
+          "iqr": 52.68,
+          "median": 121.54,
+          "p25": 94.01,
+          "p75": 146.69
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 64.2,
+          "median": 99.5,
+          "p25": 73.8,
+          "p75": 138.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3096.61,
+          "median": 8221.63,
+          "p25": 6937.1,
+          "p75": 10033.71
+        },
+        "city_id": "贵阳",
+        "sample_count": 2429
+      },
+      {
+        "area_sqm": {
+          "iqr": 45.69,
+          "median": 93.94,
+          "p25": 78.59,
+          "p75": 124.28
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 67.8,
+          "median": 90.0,
+          "p25": 65.0,
+          "p75": 132.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4150.55,
+          "median": 9698.51,
+          "p25": 7917.47,
+          "p75": 12068.02
+        },
+        "city_id": "威海",
+        "sample_count": 2426
+      },
+      {
+        "area_sqm": {
+          "iqr": 43.0,
+          "median": 119.0,
+          "p25": 95.0,
+          "p75": 138.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 32.7,
+          "median": 76.8,
+          "p25": 60.0,
+          "p75": 92.7
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 1740.12,
+          "median": 6461.23,
+          "p25": 5720.41,
+          "p75": 7460.53
+        },
+        "city_id": "菏泽",
+        "sample_count": 2424
+      },
+      {
+        "area_sqm": {
+          "iqr": 44.0,
+          "median": 115.51,
+          "p25": 91.0,
+          "p75": 135.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 80.0,
+          "median": 127.0,
+          "p25": 90.0,
+          "p75": 170.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 5079.74,
+          "median": 11274.56,
+          "p25": 9133.46,
+          "p75": 14213.2
+        },
+        "city_id": "南宁",
+        "sample_count": 2423
+      },
+      {
+        "area_sqm": {
+          "iqr": 50.29,
+          "median": 99.95,
+          "p25": 86.0,
+          "p75": 136.29
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 99.0,
+          "median": 125.0,
+          "p25": 83.0,
+          "p75": 182.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 5953.5,
+          "median": 12190.17,
+          "p25": 9222.36,
+          "p75": 15175.86
+        },
+        "city_id": "郑州",
+        "sample_count": 2417
+      },
+      {
+        "area_sqm": {
+          "iqr": 28.93,
+          "median": 89.63,
+          "p25": 78.81,
+          "p75": 107.74
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 97.0,
+          "median": 138.0,
+          "p25": 103.0,
+          "p75": 200.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9032.52,
+          "median": 15681.41,
+          "p25": 12238.77,
+          "p75": 21271.29
+        },
+        "city_id": "青岛",
+        "sample_count": 2413
+      },
+      {
+        "area_sqm": {
+          "iqr": 40.79,
+          "median": 98.0,
+          "p25": 85.65,
+          "p75": 126.44
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 101.0,
+          "median": 165.0,
+          "p25": 124.0,
+          "p75": 225.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6554.18,
+          "median": 16430.17,
+          "p25": 13504.27,
+          "p75": 20058.45
+        },
+        "city_id": "嘉兴",
+        "sample_count": 2408
+      },
+      {
+        "area_sqm": {
+          "iqr": 35.78,
+          "median": 98.93,
+          "p25": 84.67,
+          "p75": 120.45
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 70.8,
+          "median": 103.0,
+          "p25": 69.0,
+          "p75": 139.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4668.08,
+          "median": 10395.51,
+          "p25": 7776.72,
+          "p75": 12444.8
+        },
+        "city_id": "马鞍山",
+        "sample_count": 2400
+      },
+      {
+        "area_sqm": {
+          "iqr": 36.43,
+          "median": 104.73,
+          "p25": 86.41,
+          "p75": 122.84
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 87.0,
+          "median": 130.0,
+          "p25": 88.0,
+          "p75": 175.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6192.54,
+          "median": 13144.12,
+          "p25": 9886.53,
+          "p75": 16079.07
+        },
+        "city_id": "芜湖",
+        "sample_count": 2396
+      },
+      {
+        "area_sqm": {
+          "iqr": 47.53,
+          "median": 115.0,
+          "p25": 90.0,
+          "p75": 137.53
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 46.8,
+          "median": 76.5,
+          "p25": 56.0,
+          "p75": 102.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2870.66,
+          "median": 6945.84,
+          "p25": 5459.77,
+          "p75": 8330.43
+        },
+        "city_id": "新乡",
+        "sample_count": 2395
+      },
+      {
+        "area_sqm": {
+          "iqr": 37.96,
+          "median": 106.07,
+          "p25": 89.0,
+          "p75": 126.96
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 76.0,
+          "median": 118.0,
+          "p25": 90.0,
+          "p75": 166.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6044.89,
+          "median": 11125.95,
+          "p25": 9114.83,
+          "p75": 15159.72
+        },
+        "city_id": "南昌",
+        "sample_count": 2393
+      },
+      {
+        "area_sqm": {
+          "iqr": 50.1,
+          "median": 87.79,
+          "p25": 63.33,
+          "p75": 113.43
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 71.0,
+          "median": 82.0,
+          "p25": 59.0,
+          "p75": 130.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4674.33,
+          "median": 10350.16,
+          "p25": 8239.15,
+          "p75": 12913.48
+        },
+        "city_id": "唐山",
+        "sample_count": 2392
+      },
+      {
+        "area_sqm": {
+          "iqr": 36.98,
+          "median": 94.83,
+          "p25": 86.52,
+          "p75": 123.5
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 110.0,
+          "median": 195.0,
+          "p25": 150.0,
+          "p75": 260.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8360.73,
+          "median": 20137.3,
+          "p25": 15896.26,
+          "p75": 24256.99
+        },
+        "city_id": "昆山",
+        "sample_count": 2390
+      },
+      {
+        "area_sqm": {
+          "iqr": 33.27,
+          "median": 99.0,
+          "p25": 88.0,
+          "p75": 121.27
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 41.1,
+          "median": 91.8,
+          "p25": 73.9,
+          "p75": 115.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2946.8,
+          "median": 9071.23,
+          "p25": 7507.75,
+          "p75": 10454.55
+        },
+        "city_id": "句容",
+        "sample_count": 2382
+      },
+      {
+        "area_sqm": {
+          "iqr": 31.55,
+          "median": 110.08,
+          "p25": 93.45,
+          "p75": 125.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 48.0,
+          "median": 115.0,
+          "p25": 92.0,
+          "p75": 140.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3096.72,
+          "median": 10108.95,
+          "p25": 8924.65,
+          "p75": 12021.37
+        },
+        "city_id": "淮安",
+        "sample_count": 2379
+      },
+      {
+        "area_sqm": {
+          "iqr": 45.16,
+          "median": 115.41,
+          "p25": 95.0,
+          "p75": 140.16
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 72.0,
+          "median": 96.0,
+          "p25": 66.0,
+          "p75": 138.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3648.77,
+          "median": 8294.55,
+          "p25": 6652.96,
+          "p75": 10301.73
+        },
+        "city_id": "淄博",
+        "sample_count": 2369
+      },
+      {
+        "area_sqm": {
+          "iqr": 37.42,
+          "median": 106.77,
+          "p25": 89.0,
+          "p75": 126.42
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 48.0,
+          "median": 89.0,
+          "p25": 69.0,
+          "p75": 117.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3357.12,
+          "median": 8473.92,
+          "p25": 6889.28,
+          "p75": 10246.4
+        },
+        "city_id": "镇江",
+        "sample_count": 2369
+      },
+      {
+        "area_sqm": {
+          "iqr": 40.46,
+          "median": 84.22,
+          "p25": 59.63,
+          "p75": 100.09
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 113.0,
+          "median": 144.0,
+          "p25": 100.0,
+          "p75": 213.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 13713.97,
+          "median": 18581.91,
+          "p25": 12929.01,
+          "p75": 26642.98
+        },
+        "city_id": "天津",
+        "sample_count": 2366
+      },
+      {
+        "area_sqm": {
+          "iqr": 33.14,
+          "median": 90.07,
+          "p25": 79.09,
+          "p75": 112.23
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 88.0,
+          "median": 139.0,
+          "p25": 102.0,
+          "p75": 190.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8328.78,
+          "median": 15112.11,
+          "p25": 11772.21,
+          "p75": 20100.99
+        },
+        "city_id": "成都",
+        "sample_count": 2354
+      },
+      {
+        "area_sqm": {
+          "iqr": 39.08,
+          "median": 101.16,
+          "p25": 88.32,
+          "p75": 127.4
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 100.0,
+          "median": 166.0,
+          "p25": 125.0,
+          "p75": 225.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6709.33,
+          "median": 15826.79,
+          "p25": 12923.73,
+          "p75": 19633.06
+        },
+        "city_id": "无锡",
+        "sample_count": 2337
+      },
+      {
+        "area_sqm": {
+          "iqr": 31.75,
+          "median": 88.84,
+          "p25": 80.71,
+          "p75": 112.46
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 80.0,
+          "median": 123.0,
+          "p25": 89.0,
+          "p75": 169.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6617.32,
+          "median": 13958.68,
+          "p25": 10583.03,
+          "p75": 17200.35
+        },
+        "city_id": "廊坊",
+        "sample_count": 2333
+      },
+      {
+        "area_sqm": {
+          "iqr": 50.97,
+          "median": 94.27,
+          "p25": 71.0,
+          "p75": 121.97
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 64.0,
+          "median": 99.0,
+          "p25": 72.0,
+          "p75": 136.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3818.94,
+          "median": 10915.9,
+          "p25": 9157.65,
+          "p75": 12976.59
+        },
+        "city_id": "兰州",
+        "sample_count": 2330
+      },
+      {
+        "area_sqm": {
+          "iqr": 36.91,
+          "median": 108.8,
+          "p25": 89.09,
+          "p75": 126.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 63.0,
+          "median": 118.1,
+          "p25": 90.0,
+          "p75": 153.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4128.4,
+          "median": 11470.59,
+          "p25": 9375.0,
+          "p75": 13503.4
+        },
+        "city_id": "漳州",
+        "sample_count": 2329
+      },
+      {
+        "area_sqm": {
+          "iqr": 41.55,
+          "median": 102.25,
+          "p25": 86.45,
+          "p75": 128.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 49.0,
+          "median": 86.8,
+          "p25": 66.0,
+          "p75": 115.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3876.5,
+          "median": 8522.46,
+          "p25": 6607.37,
+          "p75": 10483.87
+        },
+        "city_id": "绵阳",
+        "sample_count": 2327
+      },
+      {
+        "area_sqm": {
+          "iqr": 42.0,
+          "median": 120.0,
+          "p25": 98.0,
+          "p75": 140.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 75.0,
+          "median": 125.0,
+          "p25": 85.0,
+          "p75": 160.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 5256.64,
+          "median": 10380.95,
+          "p25": 7743.36,
+          "p75": 13000.0
+        },
+        "city_id": "湛江",
+        "sample_count": 2325
+      },
+      {
+        "area_sqm": {
+          "iqr": 36.57,
+          "median": 117.0,
+          "p25": 95.93,
+          "p75": 132.5
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 39.0,
+          "median": 68.0,
+          "p25": 49.0,
+          "p75": 88.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2174.23,
+          "median": 5924.71,
+          "p25": 4899.85,
+          "p75": 7074.08
+        },
+        "city_id": "黄石",
+        "sample_count": 2325
+      },
+      {
+        "area_sqm": {
+          "iqr": 39.4,
+          "median": 97.26,
+          "p25": 85.54,
+          "p75": 124.94
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 64.0,
+          "median": 105.0,
+          "p25": 75.0,
+          "p75": 139.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4082.64,
+          "median": 10127.48,
+          "p25": 8251.12,
+          "p75": 12333.76
+        },
+        "city_id": "长沙",
+        "sample_count": 2322
+      },
+      {
+        "area_sqm": {
+          "iqr": 41.6,
+          "median": 108.93,
+          "p25": 87.91,
+          "p75": 129.51
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 72.0,
+          "median": 135.0,
+          "p25": 103.0,
+          "p75": 175.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4028.2,
+          "median": 12505.81,
+          "p25": 10891.09,
+          "p75": 14919.29
+        },
+        "city_id": "湖州",
+        "sample_count": 2318
+      },
+      {
+        "area_sqm": {
+          "iqr": 40.66,
+          "median": 104.0,
+          "p25": 88.34,
+          "p75": 129.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 43.0,
+          "median": 71.0,
+          "p25": 50.0,
+          "p75": 93.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2229.87,
+          "median": 6933.33,
+          "p25": 5666.67,
+          "p75": 7896.54
+        },
+        "city_id": "张家口",
+        "sample_count": 2311
+      },
+      {
+        "area_sqm": {
+          "iqr": 36.68,
+          "median": 117.0,
+          "p25": 95.09,
+          "p75": 131.77
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 40.0,
+          "median": 85.0,
+          "p25": 68.0,
+          "p75": 108.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2678.1,
+          "median": 7619.51,
+          "p25": 6445.99,
+          "p75": 9124.09
+        },
+        "city_id": "宜昌",
+        "sample_count": 2302
+      },
+      {
+        "area_sqm": {
+          "iqr": 65.2,
+          "median": 114.1,
+          "p25": 84.94,
+          "p75": 150.14
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 485.0,
+          "median": 499.0,
+          "p25": 335.0,
+          "p75": 820.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 31824.42,
+          "median": 51604.45,
+          "p25": 34014.36,
+          "p75": 65838.78
+        },
+        "city_id": "厦门",
+        "sample_count": 2298
+      },
+      {
+        "area_sqm": {
+          "iqr": 36.93,
+          "median": 114.14,
+          "p25": 92.27,
+          "p75": 129.2
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 43.0,
+          "median": 86.0,
+          "p25": 67.0,
+          "p75": 110.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2550.89,
+          "median": 7932.37,
+          "p25": 6705.31,
+          "p75": 9256.2
+        },
+        "city_id": "安庆",
+        "sample_count": 2294
+      },
+      {
+        "area_sqm": {
+          "iqr": 38.53,
+          "median": 107.37,
+          "p25": 88.13,
+          "p75": 126.66
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 23.3,
+          "median": 54.0,
+          "p25": 42.7,
+          "p75": 66.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 1383.21,
+          "median": 5079.71,
+          "p25": 4464.0,
+          "p75": 5847.21
+        },
+        "city_id": "防城港",
+        "sample_count": 2282
+      },
+      {
+        "area_sqm": {
+          "iqr": 59.13,
+          "median": 104.0,
+          "p25": 75.11,
+          "p75": 134.24
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 54.0,
+          "median": 77.5,
+          "p25": 54.0,
+          "p75": 108.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2635.59,
+          "median": 7609.67,
+          "p25": 6160.71,
+          "p75": 8796.3
+        },
+        "city_id": "包头",
+        "sample_count": 2277
+      },
+      {
+        "area_sqm": {
+          "iqr": 33.78,
+          "median": 130.0,
+          "p25": 109.22,
+          "p75": 143.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 80.0,
+          "median": 130.0,
+          "p25": 98.0,
+          "p75": 178.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6141.47,
+          "median": 10153.85,
+          "p25": 7932.69,
+          "p75": 14074.16
+        },
+        "city_id": "赣州",
+        "sample_count": 2264
+      },
+      {
+        "area_sqm": {
+          "iqr": 50.56,
+          "median": 111.0,
+          "p25": 88.0,
+          "p75": 138.56
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 196.0,
+          "median": 218.0,
+          "p25": 140.0,
+          "p75": 336.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 11911.75,
+          "median": 20264.09,
+          "p25": 15184.91,
+          "p75": 27096.66
+        },
+        "city_id": "福州",
+        "sample_count": 2256
+      },
+      {
+        "area_sqm": {
+          "iqr": 43.59,
+          "median": 102.03,
+          "p25": 87.1,
+          "p75": 130.69
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 166.0,
+          "median": 176.0,
+          "p25": 120.0,
+          "p75": 286.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 11857.51,
+          "median": 18022.72,
+          "p25": 12905.4,
+          "p75": 24762.91
+        },
+        "city_id": "珠海",
+        "sample_count": 2250
+      },
+      {
+        "area_sqm": {
+          "iqr": 50.21,
+          "median": 120.0,
+          "p25": 89.79,
+          "p75": 140.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 135.0,
+          "median": 185.0,
+          "p25": 124.0,
+          "p75": 259.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8600.4,
+          "median": 16091.72,
+          "p25": 12186.12,
+          "p75": 20786.52
+        },
+        "city_id": "泉州",
+        "sample_count": 2239
+      },
+      {
+        "area_sqm": {
+          "iqr": 31.92,
+          "median": 105.0,
+          "p25": 89.0,
+          "p75": 120.92
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 29.0,
+          "median": 66.8,
+          "p25": 52.0,
+          "p75": 81.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2381.79,
+          "median": 6677.99,
+          "p25": 5277.78,
+          "p75": 7659.57
+        },
+        "city_id": "达州",
+        "sample_count": 2238
+      },
+      {
+        "area_sqm": {
+          "iqr": 45.94,
+          "median": 120.0,
+          "p25": 95.0,
+          "p75": 140.94
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 110.0,
+          "median": 169.0,
+          "p25": 128.0,
+          "p75": 238.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6730.34,
+          "median": 14794.01,
+          "p25": 11823.65,
+          "p75": 18553.99
+        },
+        "city_id": "南通",
+        "sample_count": 2222
+      },
+      {
+        "area_sqm": {
+          "iqr": 46.59,
+          "median": 120.0,
+          "p25": 91.62,
+          "p75": 138.21
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 43.1,
+          "median": 78.0,
+          "p25": 59.9,
+          "p75": 103.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2356.96,
+          "median": 6882.46,
+          "p25": 5663.3,
+          "p75": 8020.26
+        },
+        "city_id": "开封",
+        "sample_count": 2221
+      },
+      {
+        "area_sqm": {
+          "iqr": 38.95,
+          "median": 123.9,
+          "p25": 103.14,
+          "p75": 142.09
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 68.0,
+          "median": 105.0,
+          "p25": 77.0,
+          "p75": 145.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4133.8,
+          "median": 8753.61,
+          "p25": 6869.57,
+          "p75": 11003.37
+        },
+        "city_id": "临沂",
+        "sample_count": 2218
+      },
+      {
+        "area_sqm": {
+          "iqr": 52.45,
+          "median": 117.0,
+          "p25": 89.28,
+          "p75": 141.73
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 87.0,
+          "median": 140.0,
+          "p25": 108.0,
+          "p75": 195.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3979.82,
+          "median": 12169.53,
+          "p25": 10518.52,
+          "p75": 14498.34
+        },
+        "city_id": "昆明",
+        "sample_count": 2203
+      },
+      {
+        "area_sqm": {
+          "iqr": 34.15,
+          "median": 92.43,
+          "p25": 76.0,
+          "p75": 110.15
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 191.0,
+          "median": 200.0,
+          "p25": 139.0,
+          "p75": 330.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 20783.28,
+          "median": 22924.1,
+          "p25": 15619.69,
+          "p75": 36402.97
+        },
+        "city_id": "广州",
+        "sample_count": 2186
+      },
+      {
+        "area_sqm": {
+          "iqr": 41.44,
+          "median": 88.96,
+          "p25": 69.94,
+          "p75": 111.38
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 122.0,
+          "median": 190.0,
+          "p25": 143.0,
+          "p75": 265.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 10445.1,
+          "median": 23869.35,
+          "p25": 18186.72,
+          "p75": 28631.82
+        },
+        "city_id": "宁波",
+        "sample_count": 2175
+      },
+      {
+        "area_sqm": {
+          "iqr": 46.36,
+          "median": 115.98,
+          "p25": 89.64,
+          "p75": 136.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 52.0,
+          "median": 90.0,
+          "p25": 68.0,
+          "p75": 120.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3034.35,
+          "median": 7844.02,
+          "p25": 6655.73,
+          "p75": 9690.08
+        },
+        "city_id": "柳州",
+        "sample_count": 2175
+      },
+      {
+        "area_sqm": {
+          "iqr": 36.72,
+          "median": 91.16,
+          "p25": 76.71,
+          "p75": 113.43
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 79.0,
+          "median": 127.5,
+          "p25": 93.0,
+          "p75": 172.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6081.02,
+          "median": 14041.88,
+          "p25": 11192.27,
+          "p75": 17273.29
+        },
+        "city_id": "西安",
+        "sample_count": 2175
+      },
+      {
+        "area_sqm": {
+          "iqr": 43.29,
+          "median": 113.96,
+          "p25": 90.29,
+          "p75": 133.58
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 47.0,
+          "median": 93.0,
+          "p25": 72.0,
+          "p75": 119.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2490.77,
+          "median": 8330.88,
+          "p25": 7214.16,
+          "p75": 9704.93
+        },
+        "city_id": "襄阳",
+        "sample_count": 2171
+      },
+      {
+        "area_sqm": {
+          "iqr": 24.29,
+          "median": 94.0,
+          "p25": 86.15,
+          "p75": 110.44
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 40.0,
+          "median": 85.0,
+          "p25": 66.0,
+          "p75": 106.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2902.61,
+          "median": 8779.73,
+          "p25": 7423.48,
+          "p75": 10326.09
+        },
+        "city_id": "保定",
+        "sample_count": 2161
+      },
+      {
+        "area_sqm": {
+          "iqr": 44.98,
+          "median": 122.42,
+          "p25": 93.63,
+          "p75": 138.61
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 42.5,
+          "median": 68.9,
+          "p25": 49.5,
+          "p75": 92.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2502.3,
+          "median": 5899.28,
+          "p25": 4741.62,
+          "p75": 7243.92
+        },
+        "city_id": "许昌",
+        "sample_count": 2160
+      },
+      {
+        "area_sqm": {
+          "iqr": 34.42,
+          "median": 123.76,
+          "p25": 103.69,
+          "p75": 138.11
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 44.0,
+          "median": 98.0,
+          "p25": 79.0,
+          "p75": 123.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2854.2,
+          "median": 8088.4,
+          "p25": 6880.4,
+          "p75": 9734.6
+        },
+        "city_id": "上饶",
+        "sample_count": 2153
+      },
+      {
+        "area_sqm": {
+          "iqr": 34.25,
+          "median": 129.7,
+          "p25": 113.25,
+          "p75": 147.5
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 34.8,
+          "median": 85.0,
+          "p25": 68.0,
+          "p75": 102.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2053.46,
+          "median": 6643.36,
+          "p25": 5573.66,
+          "p75": 7627.12
+        },
+        "city_id": "常德",
+        "sample_count": 2144
+      },
+      {
+        "area_sqm": {
+          "iqr": 43.09,
+          "median": 116.0,
+          "p25": 89.57,
+          "p75": 132.66
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 37.2,
+          "median": 61.5,
+          "p25": 47.8,
+          "p75": 85.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2502.96,
+          "median": 5575.02,
+          "p25": 4598.49,
+          "p75": 7101.45
+        },
+        "city_id": "桂林",
+        "sample_count": 2144
+      },
+      {
+        "area_sqm": {
+          "iqr": 27.96,
+          "median": 124.64,
+          "p25": 109.85,
+          "p75": 137.81
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 31.0,
+          "median": 88.0,
+          "p25": 75.0,
+          "p75": 106.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2402.28,
+          "median": 7216.49,
+          "p25": 6107.52,
+          "p75": 8509.8
+        },
+        "city_id": "吉安",
+        "sample_count": 2137
+      },
+      {
+        "area_sqm": {
+          "iqr": 40.37,
+          "median": 103.79,
+          "p25": 88.51,
+          "p75": 128.88
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 30.7,
+          "median": 50.0,
+          "p25": 35.3,
+          "p75": 66.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 1991.87,
+          "median": 4702.46,
+          "p25": 3721.16,
+          "p75": 5713.03
+        },
+        "city_id": "宝鸡",
+        "sample_count": 2130
+      },
+      {
+        "area_sqm": {
+          "iqr": 30.46,
+          "median": 90.6,
+          "p25": 77.73,
+          "p75": 108.19
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 108.0,
+          "median": 148.0,
+          "p25": 105.0,
+          "p75": 213.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9544.79,
+          "median": 16160.68,
+          "p25": 12282.62,
+          "p75": 21827.41
+        },
+        "city_id": "合肥",
+        "sample_count": 2127
+      },
+      {
+        "area_sqm": {
+          "iqr": 35.87,
+          "median": 88.0,
+          "p25": 69.38,
+          "p75": 105.25
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 326.0,
+          "median": 439.0,
+          "p25": 324.0,
+          "p75": 650.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 30130.82,
+          "median": 52502.14,
+          "p25": 41024.5,
+          "p75": 71155.32
+        },
+        "city_id": "深圳",
+        "sample_count": 2119
+      },
+      {
+        "area_sqm": {
+          "iqr": 29.11,
+          "median": 91.72,
+          "p25": 82.35,
+          "p75": 111.46
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 89.5,
+          "median": 185.0,
+          "p25": 147.5,
+          "p75": 237.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 7408.4,
+          "median": 20254.97,
+          "p25": 16872.38,
+          "p75": 24280.78
+        },
+        "city_id": "苏州",
+        "sample_count": 2111
+      },
+      {
+        "area_sqm": {
+          "iqr": 39.93,
+          "median": 81.32,
+          "p25": 61.49,
+          "p75": 101.42
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 353.0,
+          "median": 470.0,
+          "p25": 325.0,
+          "p75": 678.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 39884.29,
+          "median": 56603.77,
+          "p25": 42774.09,
+          "p75": 82658.38
+        },
+        "city_id": "北京",
+        "sample_count": 2108
+      },
+      {
+        "area_sqm": {
+          "iqr": 49.05,
+          "median": 115.0,
+          "p25": 88.42,
+          "p75": 137.47
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 44.1,
+          "median": 80.0,
+          "p25": 58.9,
+          "p75": 103.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2261.9,
+          "median": 7056.38,
+          "p25": 6071.43,
+          "p75": 8333.33
+        },
+        "city_id": "清远",
+        "sample_count": 2106
+      },
+      {
+        "area_sqm": {
+          "iqr": 39.24,
+          "median": 121.0,
+          "p25": 99.47,
+          "p75": 138.71
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 66.0,
+          "median": 101.0,
+          "p25": 75.0,
+          "p75": 141.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4145.41,
+          "median": 8939.39,
+          "p25": 6875.0,
+          "p75": 11020.41
+        },
+        "city_id": "九江",
+        "sample_count": 2099
+      },
+      {
+        "area_sqm": {
+          "iqr": 42.0,
+          "median": 118.0,
+          "p25": 95.0,
+          "p75": 137.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 120.0,
+          "median": 185.0,
+          "p25": 140.0,
+          "p75": 260.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9159.76,
+          "median": 16224.6,
+          "p25": 13297.87,
+          "p75": 22457.63
+        },
+        "city_id": "衢州",
+        "sample_count": 2057
+      },
+      {
+        "area_sqm": {
+          "iqr": 36.43,
+          "median": 114.74,
+          "p25": 96.0,
+          "p75": 132.43
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 81.2,
+          "median": 140.0,
+          "p25": 106.8,
+          "p75": 188.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 5445.34,
+          "median": 12528.3,
+          "p25": 10150.47,
+          "p75": 15595.81
+        },
+        "city_id": "盐城",
+        "sample_count": 2052
+      },
+      {
+        "area_sqm": {
+          "iqr": 43.72,
+          "median": 110.9,
+          "p25": 88.3,
+          "p75": 132.02
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 88.0,
+          "median": 165.0,
+          "p25": 128.8,
+          "p75": 216.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6221.49,
+          "median": 15737.37,
+          "p25": 12787.88,
+          "p75": 19009.37
+        },
+        "city_id": "海门",
+        "sample_count": 2006
+      },
+      {
+        "area_sqm": {
+          "iqr": 41.55,
+          "median": 122.35,
+          "p25": 96.54,
+          "p75": 138.09
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 38.0,
+          "median": 75.0,
+          "p25": 57.0,
+          "p75": 95.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2005.4,
+          "median": 6466.17,
+          "p25": 5468.44,
+          "p75": 7473.84
+        },
+        "city_id": "驻马店",
+        "sample_count": 1988
+      },
+      {
+        "area_sqm": {
+          "iqr": 39.27,
+          "median": 100.96,
+          "p25": 83.04,
+          "p75": 122.31
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 39.8,
+          "median": 98.0,
+          "p25": 80.0,
+          "p75": 119.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3611.32,
+          "median": 9377.28,
+          "p25": 8118.89,
+          "p75": 11730.21
+        },
+        "city_id": "凉山",
+        "sample_count": 1962
+      },
+      {
+        "area_sqm": {
+          "iqr": 31.4,
+          "median": 93.16,
+          "p25": 82.6,
+          "p75": 114.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 95.0,
+          "median": 125.0,
+          "p25": 85.0,
+          "p75": 180.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8180.11,
+          "median": 12934.78,
+          "p25": 9512.2,
+          "p75": 17692.31
+        },
+        "city_id": "佛山",
+        "sample_count": 1959
+      },
+      {
+        "area_sqm": {
+          "iqr": 46.18,
+          "median": 116.0,
+          "p25": 89.62,
+          "p75": 135.8
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 95.5,
+          "median": 185.0,
+          "p25": 149.5,
+          "p75": 245.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6811.61,
+          "median": 17272.73,
+          "p25": 13902.68,
+          "p75": 20714.29
+        },
+        "city_id": "绍兴",
+        "sample_count": 1949
+      },
+      {
+        "area_sqm": {
+          "iqr": 32.0,
+          "median": 103.0,
+          "p25": 90.0,
+          "p75": 122.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 28.4,
+          "median": 66.0,
+          "p25": 52.6,
+          "p75": 81.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2507.84,
+          "median": 6412.84,
+          "p25": 5084.75,
+          "p75": 7592.59
+        },
+        "city_id": "南充",
+        "sample_count": 1906
+      },
+      {
+        "area_sqm": {
+          "iqr": 31.76,
+          "median": 117.0,
+          "p25": 99.24,
+          "p75": 131.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 31.0,
+          "median": 73.0,
+          "p25": 59.0,
+          "p75": 90.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2175.52,
+          "median": 6440.68,
+          "p25": 5397.22,
+          "p75": 7572.74
+        },
+        "city_id": "德阳",
+        "sample_count": 1893
+      },
+      {
+        "area_sqm": {
+          "iqr": 36.89,
+          "median": 96.97,
+          "p25": 82.16,
+          "p75": 119.05
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 154.0,
+          "median": 215.0,
+          "p25": 144.0,
+          "p75": 298.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 12075.19,
+          "median": 21916.53,
+          "p25": 16022.94,
+          "p75": 28098.13
+        },
+        "city_id": "东莞",
+        "sample_count": 1868
+      },
+      {
+        "area_sqm": {
+          "iqr": 42.62,
+          "median": 122.09,
+          "p25": 99.38,
+          "p75": 142.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 66.0,
+          "median": 120.0,
+          "p25": 90.0,
+          "p75": 156.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2890.95,
+          "median": 10000.0,
+          "p25": 8737.86,
+          "p75": 11628.81
+        },
+        "city_id": "济宁",
+        "sample_count": 1861
+      },
+      {
+        "area_sqm": {
+          "iqr": 41.0,
+          "median": 124.95,
+          "p25": 100.0,
+          "p75": 141.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 30.0,
+          "median": 70.0,
+          "p25": 56.0,
+          "p75": 86.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 1913.35,
+          "median": 5876.3,
+          "p25": 4925.54,
+          "p75": 6838.89
+        },
+        "city_id": "株洲",
+        "sample_count": 1856
+      },
+      {
+        "area_sqm": {
+          "iqr": 34.06,
+          "median": 98.0,
+          "p25": 82.59,
+          "p75": 116.65
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 36.0,
+          "median": 50.0,
+          "p25": 36.0,
+          "p75": 72.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2756.0,
+          "median": 5223.49,
+          "p25": 4047.29,
+          "p75": 6803.29
+        },
+        "city_id": "鄂州",
+        "sample_count": 1847
+      },
+      {
+        "area_sqm": {
+          "iqr": 58.94,
+          "median": 128.83,
+          "p25": 96.06,
+          "p75": 155.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 173.0,
+          "median": 230.0,
+          "p25": 155.0,
+          "p75": 328.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 10514.26,
+          "median": 18977.97,
+          "p25": 14509.8,
+          "p75": 25024.06
+        },
+        "city_id": "温州",
+        "sample_count": 1826
+      },
+      {
+        "area_sqm": {
+          "iqr": 47.2,
+          "median": 122.55,
+          "p25": 93.0,
+          "p75": 140.2
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 130.9,
+          "median": 205.0,
+          "p25": 149.9,
+          "p75": 280.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9804.43,
+          "median": 16851.85,
+          "p25": 13125.51,
+          "p75": 22929.94
+        },
+        "city_id": "金华",
+        "sample_count": 1796
+      },
+      {
+        "area_sqm": {
+          "iqr": 37.61,
+          "median": 106.0,
+          "p25": 89.5,
+          "p75": 127.11
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 61.0,
+          "median": 90.0,
+          "p25": 61.0,
+          "p75": 122.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4039.68,
+          "median": 8348.87,
+          "p25": 6421.05,
+          "p75": 10460.73
+        },
+        "city_id": "江门",
+        "sample_count": 1771
+      },
+      {
+        "area_sqm": {
+          "iqr": 41.43,
+          "median": 125.26,
+          "p25": 99.57,
+          "p75": 141.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 34.8,
+          "median": 81.0,
+          "p25": 64.8,
+          "p75": 99.6
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2364.66,
+          "median": 6667.76,
+          "p25": 5658.6,
+          "p75": 8023.26
+        },
+        "city_id": "岳阳",
+        "sample_count": 1757
+      },
+      {
+        "area_sqm": {
+          "iqr": 46.61,
+          "median": 101.57,
+          "p25": 80.0,
+          "p75": 126.61
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 58.0,
+          "median": 85.0,
+          "p25": 62.0,
+          "p75": 120.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2982.83,
+          "median": 8284.4,
+          "p25": 7003.96,
+          "p75": 9986.79
+        },
+        "city_id": "乌鲁木齐",
+        "sample_count": 1706
+      },
+      {
+        "area_sqm": {
+          "iqr": 50.0,
+          "median": 118.0,
+          "p25": 89.0,
+          "p75": 139.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 72.0,
+          "median": 120.0,
+          "p25": 90.0,
+          "p75": 162.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4021.68,
+          "median": 10862.07,
+          "p25": 8943.09,
+          "p75": 12964.77
+        },
+        "city_id": "大理",
+        "sample_count": 1638
+      },
+      {
+        "area_sqm": {
+          "iqr": 31.99,
+          "median": 104.0,
+          "p25": 90.63,
+          "p75": 122.62
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 30.0,
+          "median": 70.0,
+          "p25": 58.0,
+          "p75": 88.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2567.44,
+          "median": 6896.55,
+          "p25": 5693.43,
+          "p75": 8260.87
+        },
+        "city_id": "雅安",
+        "sample_count": 1580
+      },
+      {
+        "area_sqm": {
+          "iqr": 36.73,
+          "median": 74.0,
+          "p25": 57.74,
+          "p75": 94.47
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 144.0,
+          "median": 220.0,
+          "p25": 156.0,
+          "p75": 300.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 9040.95,
+          "median": 29098.36,
+          "p25": 25340.91,
+          "p75": 34381.86
+        },
+        "city_id": "三亚",
+        "sample_count": 1556
+      },
+      {
+        "area_sqm": {
+          "iqr": 44.0,
+          "median": 131.0,
+          "p25": 107.0,
+          "p75": 151.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 149.2,
+          "median": 233.0,
+          "p25": 168.8,
+          "p75": 318.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 8034.72,
+          "median": 18750.0,
+          "p25": 14777.78,
+          "p75": 22812.5
+        },
+        "city_id": "台州",
+        "sample_count": 1542
+      },
+      {
+        "area_sqm": {
+          "iqr": 26.0,
+          "median": 124.09,
+          "p25": 110.0,
+          "p75": 136.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 30.0,
+          "median": 63.0,
+          "p25": 48.0,
+          "p75": 78.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2056.96,
+          "median": 5243.9,
+          "p25": 4193.04,
+          "p75": 6250.0
+        },
+        "city_id": "周口",
+        "sample_count": 1541
+      },
+      {
+        "area_sqm": {
+          "iqr": 51.0,
+          "median": 110.14,
+          "p25": 86.0,
+          "p75": 137.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 116.0,
+          "median": 185.0,
+          "p25": 139.0,
+          "p75": 255.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 6220.88,
+          "median": 17567.77,
+          "p25": 14541.93,
+          "p75": 20762.81
+        },
+        "city_id": "海口",
+        "sample_count": 1536
+      },
+      {
+        "area_sqm": {
+          "iqr": 49.87,
+          "median": 113.7,
+          "p25": 90.03,
+          "p75": 139.9
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 80.0,
+          "median": 146.0,
+          "p25": 109.0,
+          "p75": 189.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 5431.69,
+          "median": 12970.82,
+          "p25": 10455.71,
+          "p75": 15887.4
+        },
+        "city_id": "江阴",
+        "sample_count": 1519
+      },
+      {
+        "area_sqm": {
+          "iqr": 44.0,
+          "median": 119.0,
+          "p25": 95.0,
+          "p75": 139.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 51.2,
+          "median": 105.8,
+          "p25": 81.8,
+          "p75": 133.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2672.5,
+          "median": 9000.0,
+          "p25": 7771.94,
+          "p75": 10444.44
+        },
+        "city_id": "丹阳",
+        "sample_count": 1452
+      },
+      {
+        "area_sqm": {
+          "iqr": 41.92,
+          "median": 98.55,
+          "p25": 82.4,
+          "p75": 124.32
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 75.0,
+          "median": 118.9,
+          "p25": 88.0,
+          "p75": 163.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4667.72,
+          "median": 12015.69,
+          "p25": 9921.14,
+          "p75": 14588.86
+        },
+        "city_id": "重庆",
+        "sample_count": 1432
+      },
+      {
+        "area_sqm": {
+          "iqr": 28.0,
+          "median": 78.0,
+          "p25": 62.0,
+          "p75": 90.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 38.0,
+          "median": 83.0,
+          "p25": 65.0,
+          "p75": 103.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2351.83,
+          "median": 10826.09,
+          "p25": 9599.39,
+          "p75": 11951.22
+        },
+        "city_id": "澄迈",
+        "sample_count": 1379
+      },
+      {
+        "area_sqm": {
+          "iqr": 49.97,
+          "median": 115.8,
+          "p25": 89.63,
+          "p75": 139.6
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 80.0,
+          "median": 165.0,
+          "p25": 130.0,
+          "p75": 210.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 5369.75,
+          "median": 14566.93,
+          "p25": 12100.13,
+          "p75": 17469.88
+        },
+        "city_id": "常熟",
+        "sample_count": 1373
+      },
+      {
+        "area_sqm": {
+          "iqr": 40.11,
+          "median": 109.0,
+          "p25": 90.68,
+          "p75": 130.79
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 58.5,
+          "median": 110.0,
+          "p25": 86.5,
+          "p75": 145.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 4091.82,
+          "median": 9928.57,
+          "p25": 8500.0,
+          "p75": 12591.82
+        },
+        "city_id": "泰安",
+        "sample_count": 1336
+      },
+      {
+        "area_sqm": {
+          "iqr": 43.0,
+          "median": 115.0,
+          "p25": 93.0,
+          "p75": 136.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 37.0,
+          "median": 85.0,
+          "p25": 68.0,
+          "p75": 105.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 1497.7,
+          "median": 7392.41,
+          "p25": 6737.59,
+          "p75": 8235.29
+        },
+        "city_id": "晋中",
+        "sample_count": 1292
+      },
+      {
+        "area_sqm": {
+          "iqr": 28.07,
+          "median": 114.0,
+          "p25": 98.07,
+          "p75": 126.14
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 42.0,
+          "median": 89.0,
+          "p25": 72.0,
+          "p75": 114.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2690.45,
+          "median": 8066.67,
+          "p25": 6721.31,
+          "p75": 9411.76
+        },
+        "city_id": "阜阳",
+        "sample_count": 1145
+      },
+      {
+        "area_sqm": {
+          "iqr": 38.0,
+          "median": 120.0,
+          "p25": 100.0,
+          "p75": 138.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 40.0,
+          "median": 75.0,
+          "p25": 55.0,
+          "p75": 95.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 1962.05,
+          "median": 6287.88,
+          "p25": 5289.86,
+          "p75": 7251.91
+        },
+        "city_id": "运城",
+        "sample_count": 1138
+      },
+      {
+        "area_sqm": {
+          "iqr": 33.31,
+          "median": 107.0,
+          "p25": 89.0,
+          "p75": 122.31
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 35.0,
+          "median": 73.0,
+          "p25": 57.8,
+          "p75": 92.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3075.95,
+          "median": 6980.99,
+          "p25": 5685.95,
+          "p75": 8761.9
+        },
+        "city_id": "遂宁",
+        "sample_count": 1117
+      },
+      {
+        "area_sqm": {
+          "iqr": 30.68,
+          "median": 100.78,
+          "p25": 89.0,
+          "p75": 119.68
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 40.6,
+          "median": 85.0,
+          "p25": 68.0,
+          "p75": 108.6
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2985.05,
+          "median": 8511.46,
+          "p25": 7022.73,
+          "p75": 10007.78
+        },
+        "city_id": "宜宾",
+        "sample_count": 1114
+      },
+      {
+        "area_sqm": {
+          "iqr": 40.0,
+          "median": 121.0,
+          "p25": 97.0,
+          "p75": 137.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 68.0,
+          "median": 115.0,
+          "p25": 87.0,
+          "p75": 155.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3617.57,
+          "median": 9893.02,
+          "p25": 8333.33,
+          "p75": 11950.9
+        },
+        "city_id": "承德",
+        "sample_count": 994
+      },
+      {
+        "area_sqm": {
+          "iqr": 38.95,
+          "median": 127.0,
+          "p25": 102.5,
+          "p75": 141.45
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 23.0,
+          "median": 55.8,
+          "p25": 45.0,
+          "p75": 68.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 1476.44,
+          "median": 4616.13,
+          "p25": 3920.91,
+          "p75": 5397.35
+        },
+        "city_id": "湘西",
+        "sample_count": 925
+      },
+      {
+        "area_sqm": {
+          "iqr": 38.87,
+          "median": 89.26,
+          "p25": 77.67,
+          "p75": 116.54
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 183.0,
+          "median": 245.0,
+          "p25": 185.0,
+          "p75": 368.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 18707.93,
+          "median": 29074.44,
+          "p25": 21759.7,
+          "p75": 40467.63
+        },
+        "city_id": "杭州",
+        "sample_count": 921
+      },
+      {
+        "area_sqm": {
+          "iqr": 29.76,
+          "median": 97.69,
+          "p25": 82.57,
+          "p75": 112.33
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 33.5,
+          "median": 57.5,
+          "p25": 43.0,
+          "p75": 76.5
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2046.29,
+          "median": 6076.92,
+          "p25": 5037.04,
+          "p75": 7083.33
+        },
+        "city_id": "抚顺",
+        "sample_count": 909
+      },
+      {
+        "area_sqm": {
+          "iqr": 31.47,
+          "median": 127.0,
+          "p25": 109.79,
+          "p75": 141.26
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 36.0,
+          "median": 84.0,
+          "p25": 69.0,
+          "p75": 105.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 1644.61,
+          "median": 6666.67,
+          "p25": 5966.5,
+          "p75": 7611.11
+        },
+        "city_id": "平顶山",
+        "sample_count": 898
+      },
+      {
+        "area_sqm": {
+          "iqr": 47.3,
+          "median": 113.0,
+          "p25": 92.7,
+          "p75": 140.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 64.0,
+          "median": 120.0,
+          "p25": 92.0,
+          "p75": 156.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2510.59,
+          "median": 10502.28,
+          "p25": 9313.73,
+          "p75": 11824.32
+        },
+        "city_id": "邯郸",
+        "sample_count": 735
+      },
+      {
+        "area_sqm": {
+          "iqr": 36.0,
+          "median": 124.0,
+          "p25": 102.0,
+          "p75": 138.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 26.0,
+          "median": 67.8,
+          "p25": 53.8,
+          "p75": 79.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 1619.62,
+          "median": 5673.66,
+          "p25": 4838.71,
+          "p75": 6458.33
+        },
+        "city_id": "衡阳",
+        "sample_count": 724
+      },
+      {
+        "area_sqm": {
+          "iqr": 30.84,
+          "median": 104.22,
+          "p25": 88.46,
+          "p75": 119.3
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 34.0,
+          "median": 62.0,
+          "p25": 46.0,
+          "p75": 80.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2673.52,
+          "median": 6442.31,
+          "p25": 4928.32,
+          "p75": 7601.84
+        },
+        "city_id": "攀枝花",
+        "sample_count": 666
+      },
+      {
+        "area_sqm": {
+          "iqr": 44.82,
+          "median": 111.87,
+          "p25": 89.88,
+          "p75": 134.7
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 85.0,
+          "median": 120.0,
+          "p25": 84.0,
+          "p75": 169.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 5252.14,
+          "median": 10702.97,
+          "p25": 8704.25,
+          "p75": 13956.39
+        },
+        "city_id": "惠州",
+        "sample_count": 660
+      },
+      {
+        "area_sqm": {
+          "iqr": 29.0,
+          "median": 104.0,
+          "p25": 88.0,
+          "p75": 117.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 22.8,
+          "median": 66.4,
+          "p25": 56.0,
+          "p75": 78.8
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 1451.54,
+          "median": 6435.76,
+          "p25": 5862.75,
+          "p75": 7314.29
+        },
+        "city_id": "资阳",
+        "sample_count": 657
+      },
+      {
+        "area_sqm": {
+          "iqr": 33.44,
+          "median": 104.0,
+          "p25": 87.68,
+          "p75": 121.12
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 33.0,
+          "median": 85.0,
+          "p25": 72.0,
+          "p75": 105.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 3049.65,
+          "median": 8333.33,
+          "p25": 6950.35,
+          "p75": 10000.0
+        },
+        "city_id": "广元",
+        "sample_count": 599
+      },
+      {
+        "area_sqm": {
+          "iqr": 31.18,
+          "median": 118.0,
+          "p25": 101.87,
+          "p75": 133.05
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 39.0,
+          "median": 91.0,
+          "p25": 73.0,
+          "p75": 112.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 2137.53,
+          "median": 8039.12,
+          "p25": 6846.85,
+          "p75": 8984.38
+        },
+        "city_id": "濮阳",
+        "sample_count": 571
+      },
+      {
+        "area_sqm": {
+          "iqr": 34.7,
+          "median": 105.5,
+          "p25": 93.0,
+          "p75": 127.7
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 45.0,
+          "median": 98.0,
+          "p25": 78.0,
+          "p75": 123.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 1682.84,
+          "median": 9291.34,
+          "p25": 8490.57,
+          "p75": 10173.41
+        },
+        "city_id": "天水",
+        "sample_count": 445
+      },
+      {
+        "area_sqm": {
+          "iqr": 37.0,
+          "median": 125.0,
+          "p25": 103.0,
+          "p75": 140.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 32.0,
+          "median": 85.0,
+          "p25": 67.0,
+          "p75": 99.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 1607.87,
+          "median": 6760.91,
+          "p25": 6084.44,
+          "p75": 7692.31
+        },
+        "city_id": "通辽",
+        "sample_count": 366
+      },
+      {
+        "area_sqm": {
+          "iqr": 79.0,
+          "median": 114.0,
+          "p25": 66.0,
+          "p75": 145.0
+        },
+        "asking_total_price_10k_cny": {
+          "iqr": 265.0,
+          "median": 303.0,
+          "p25": 185.0,
+          "p75": 450.0
+        },
+        "calculated_unit_price_cny_sqm": {
+          "iqr": 14916.98,
+          "median": 27714.29,
+          "p25": 20779.22,
+          "p75": 35696.2
+        },
+        "city_id": "义乌",
+        "sample_count": 122
+      }
+    ],
+    "comparable_segment": [
+      {
+        "city_id": "上海",
+        "median_unit_price_cny_sqm": 54545.45,
+        "p25_unit_price_cny_sqm": 41130.78,
+        "p75_unit_price_cny_sqm": 67630.29,
+        "sample_count": 961
+      },
+      {
+        "city_id": "北京",
+        "median_unit_price_cny_sqm": 53126.53,
+        "p25_unit_price_cny_sqm": 41117.86,
+        "p75_unit_price_cny_sqm": 77269.2,
+        "sample_count": 784
+      },
+      {
+        "city_id": "深圳",
+        "median_unit_price_cny_sqm": 51129.94,
+        "p25_unit_price_cny_sqm": 41082.76,
+        "p75_unit_price_cny_sqm": 66430.18,
+        "sample_count": 871
+      },
+      {
+        "city_id": "厦门",
+        "median_unit_price_cny_sqm": 47548.96,
+        "p25_unit_price_cny_sqm": 31142.25,
+        "p75_unit_price_cny_sqm": 59884.65,
+        "sample_count": 517
+      },
+      {
+        "city_id": "三亚",
+        "median_unit_price_cny_sqm": 28874.48,
+        "p25_unit_price_cny_sqm": 25695.22,
+        "p75_unit_price_cny_sqm": 32247.66,
+        "sample_count": 501
+      },
+      {
+        "city_id": "杭州",
+        "median_unit_price_cny_sqm": 28361.18,
+        "p25_unit_price_cny_sqm": 22869.25,
+        "p75_unit_price_cny_sqm": 36658.72,
+        "sample_count": 396
+      },
+      {
+        "city_id": "南京",
+        "median_unit_price_cny_sqm": 26298.31,
+        "p25_unit_price_cny_sqm": 19689.0,
+        "p75_unit_price_cny_sqm": 35616.08,
+        "sample_count": 960
+      },
+      {
+        "city_id": "广州",
+        "median_unit_price_cny_sqm": 25524.28,
+        "p25_unit_price_cny_sqm": 17207.79,
+        "p75_unit_price_cny_sqm": 36817.4,
+        "sample_count": 742
+      },
+      {
+        "city_id": "宁波",
+        "median_unit_price_cny_sqm": 24040.01,
+        "p25_unit_price_cny_sqm": 20311.63,
+        "p75_unit_price_cny_sqm": 27840.91,
+        "sample_count": 752
+      },
+      {
+        "city_id": "昆山",
+        "median_unit_price_cny_sqm": 20472.63,
+        "p25_unit_price_cny_sqm": 17082.49,
+        "p75_unit_price_cny_sqm": 23600.89,
+        "sample_count": 825
+      },
+      {
+        "city_id": "苏州",
+        "median_unit_price_cny_sqm": 20300.4,
+        "p25_unit_price_cny_sqm": 17549.74,
+        "p75_unit_price_cny_sqm": 23653.09,
+        "sample_count": 789
+      },
+      {
+        "city_id": "东莞",
+        "median_unit_price_cny_sqm": 19764.71,
+        "p25_unit_price_cny_sqm": 13975.9,
+        "p75_unit_price_cny_sqm": 25533.36,
+        "sample_count": 455
+      },
+      {
+        "city_id": "台州",
+        "median_unit_price_cny_sqm": 18823.53,
+        "p25_unit_price_cny_sqm": 14852.71,
+        "p75_unit_price_cny_sqm": 21871.5,
+        "sample_count": 151
+      },
+      {
+        "city_id": "温州",
+        "median_unit_price_cny_sqm": 18501.96,
+        "p25_unit_price_cny_sqm": 15000.0,
+        "p75_unit_price_cny_sqm": 24946.14,
+        "sample_count": 298
+      },
+      {
+        "city_id": "福州",
+        "median_unit_price_cny_sqm": 18363.01,
+        "p25_unit_price_cny_sqm": 14566.18,
+        "p75_unit_price_cny_sqm": 24992.33,
+        "sample_count": 512
+      },
+      {
+        "city_id": "绍兴",
+        "median_unit_price_cny_sqm": 18341.89,
+        "p25_unit_price_cny_sqm": 15796.01,
+        "p75_unit_price_cny_sqm": 21393.77,
+        "sample_count": 437
+      },
+      {
+        "city_id": "泉州",
+        "median_unit_price_cny_sqm": 18023.26,
+        "p25_unit_price_cny_sqm": 13980.26,
+        "p75_unit_price_cny_sqm": 21895.35,
+        "sample_count": 386
+      },
+      {
+        "city_id": "海口",
+        "median_unit_price_cny_sqm": 17469.88,
+        "p25_unit_price_cny_sqm": 14625.0,
+        "p75_unit_price_cny_sqm": 20040.62,
+        "sample_count": 326
+      },
+      {
+        "city_id": "天津",
+        "median_unit_price_cny_sqm": 17020.28,
+        "p25_unit_price_cny_sqm": 12643.22,
+        "p75_unit_price_cny_sqm": 22462.04,
+        "sample_count": 712
+      },
+      {
+        "city_id": "金华",
+        "median_unit_price_cny_sqm": 17011.49,
+        "p25_unit_price_cny_sqm": 13589.74,
+        "p75_unit_price_cny_sqm": 23710.84,
+        "sample_count": 341
+      },
+      {
+        "city_id": "嘉兴",
+        "median_unit_price_cny_sqm": 16527.65,
+        "p25_unit_price_cny_sqm": 13846.15,
+        "p75_unit_price_cny_sqm": 19413.83,
+        "sample_count": 872
+      },
+      {
+        "city_id": "衢州",
+        "median_unit_price_cny_sqm": 16500.38,
+        "p25_unit_price_cny_sqm": 14400.0,
+        "p75_unit_price_cny_sqm": 19471.32,
+        "sample_count": 223
+      },
+      {
+        "city_id": "海门",
+        "median_unit_price_cny_sqm": 16279.73,
+        "p25_unit_price_cny_sqm": 13487.48,
+        "p75_unit_price_cny_sqm": 18406.37,
+        "sample_count": 391
+      },
+      {
+        "city_id": "常州",
+        "median_unit_price_cny_sqm": 16253.69,
+        "p25_unit_price_cny_sqm": 13806.01,
+        "p75_unit_price_cny_sqm": 18518.52,
+        "sample_count": 553
+      },
+      {
+        "city_id": "无锡",
+        "median_unit_price_cny_sqm": 16036.84,
+        "p25_unit_price_cny_sqm": 13219.91,
+        "p75_unit_price_cny_sqm": 18947.37,
+        "sample_count": 641
+      },
+      {
+        "city_id": "珠海",
+        "median_unit_price_cny_sqm": 15850.14,
+        "p25_unit_price_cny_sqm": 12311.23,
+        "p75_unit_price_cny_sqm": 22284.87,
+        "sample_count": 589
+      },
+      {
+        "city_id": "青岛",
+        "median_unit_price_cny_sqm": 15714.46,
+        "p25_unit_price_cny_sqm": 12488.11,
+        "p75_unit_price_cny_sqm": 19920.32,
+        "sample_count": 950
+      },
+      {
+        "city_id": "成都",
+        "median_unit_price_cny_sqm": 15569.03,
+        "p25_unit_price_cny_sqm": 12171.24,
+        "p75_unit_price_cny_sqm": 20249.75,
+        "sample_count": 999
+      },
+      {
+        "city_id": "合肥",
+        "median_unit_price_cny_sqm": 15373.26,
+        "p25_unit_price_cny_sqm": 12089.81,
+        "p75_unit_price_cny_sqm": 19654.09,
+        "sample_count": 788
+      },
+      {
+        "city_id": "武汉",
+        "median_unit_price_cny_sqm": 15322.48,
+        "p25_unit_price_cny_sqm": 12180.63,
+        "p75_unit_price_cny_sqm": 18589.92,
+        "sample_count": 781
+      },
+      {
+        "city_id": "常熟",
+        "median_unit_price_cny_sqm": 14808.06,
+        "p25_unit_price_cny_sqm": 12364.95,
+        "p75_unit_price_cny_sqm": 18217.63,
+        "sample_count": 282
+      },
+      {
+        "city_id": "南通",
+        "median_unit_price_cny_sqm": 14783.39,
+        "p25_unit_price_cny_sqm": 12616.82,
+        "p75_unit_price_cny_sqm": 17773.49,
+        "sample_count": 347
+      },
+      {
+        "city_id": "西安",
+        "median_unit_price_cny_sqm": 14151.48,
+        "p25_unit_price_cny_sqm": 11212.02,
+        "p75_unit_price_cny_sqm": 16818.18,
+        "sample_count": 718
+      },
+      {
+        "city_id": "济南",
+        "median_unit_price_cny_sqm": 14087.9,
+        "p25_unit_price_cny_sqm": 11874.62,
+        "p75_unit_price_cny_sqm": 17430.6,
+        "sample_count": 532
+      },
+      {
+        "city_id": "江阴",
+        "median_unit_price_cny_sqm": 13768.12,
+        "p25_unit_price_cny_sqm": 11032.5,
+        "p75_unit_price_cny_sqm": 17356.78,
+        "sample_count": 256
+      },
+      {
+        "city_id": "廊坊",
+        "median_unit_price_cny_sqm": 13425.17,
+        "p25_unit_price_cny_sqm": 10562.14,
+        "p75_unit_price_cny_sqm": 16437.4,
+        "sample_count": 996
+      },
+      {
+        "city_id": "佛山",
+        "median_unit_price_cny_sqm": 13418.99,
+        "p25_unit_price_cny_sqm": 9873.71,
+        "p75_unit_price_cny_sqm": 18051.95,
+        "sample_count": 592
+      },
+      {
+        "city_id": "石家庄",
+        "median_unit_price_cny_sqm": 12973.91,
+        "p25_unit_price_cny_sqm": 11190.99,
+        "p75_unit_price_cny_sqm": 15065.09,
+        "sample_count": 549
+      },
+      {
+        "city_id": "大连",
+        "median_unit_price_cny_sqm": 12731.17,
+        "p25_unit_price_cny_sqm": 9679.23,
+        "p75_unit_price_cny_sqm": 16696.7,
+        "sample_count": 972
+      },
+      {
+        "city_id": "郑州",
+        "median_unit_price_cny_sqm": 12509.57,
+        "p25_unit_price_cny_sqm": 10075.19,
+        "p75_unit_price_cny_sqm": 14657.8,
+        "sample_count": 702
+      },
+      {
+        "city_id": "湖州",
+        "median_unit_price_cny_sqm": 12311.9,
+        "p25_unit_price_cny_sqm": 10805.94,
+        "p75_unit_price_cny_sqm": 14044.94,
+        "sample_count": 570
+      },
+      {
+        "city_id": "昆明",
+        "median_unit_price_cny_sqm": 11910.11,
+        "p25_unit_price_cny_sqm": 10253.52,
+        "p75_unit_price_cny_sqm": 13908.53,
+        "sample_count": 475
+      },
+      {
+        "city_id": "徐州",
+        "median_unit_price_cny_sqm": 11668.93,
+        "p25_unit_price_cny_sqm": 9937.49,
+        "p75_unit_price_cny_sqm": 13890.52,
+        "sample_count": 589
+      },
+      {
+        "city_id": "盐城",
+        "median_unit_price_cny_sqm": 11488.63,
+        "p25_unit_price_cny_sqm": 9701.87,
+        "p75_unit_price_cny_sqm": 13683.57,
+        "sample_count": 309
+      },
+      {
+        "city_id": "芜湖",
+        "median_unit_price_cny_sqm": 11467.53,
+        "p25_unit_price_cny_sqm": 9318.18,
+        "p75_unit_price_cny_sqm": 14663.76,
+        "sample_count": 627
+      },
+      {
+        "city_id": "重庆",
+        "median_unit_price_cny_sqm": 11460.92,
+        "p25_unit_price_cny_sqm": 9714.29,
+        "p75_unit_price_cny_sqm": 14040.3,
+        "sample_count": 424
+      },
+      {
+        "city_id": "漳州",
+        "median_unit_price_cny_sqm": 11340.62,
+        "p25_unit_price_cny_sqm": 9514.14,
+        "p75_unit_price_cny_sqm": 13386.22,
+        "sample_count": 550
+      },
+      {
+        "city_id": "大理",
+        "median_unit_price_cny_sqm": 11194.03,
+        "p25_unit_price_cny_sqm": 9455.07,
+        "p75_unit_price_cny_sqm": 13448.28,
+        "sample_count": 338
+      },
+      {
+        "city_id": "凉山",
+        "median_unit_price_cny_sqm": 10999.19,
+        "p25_unit_price_cny_sqm": 8852.41,
+        "p75_unit_price_cny_sqm": 13113.26,
+        "sample_count": 606
+      },
+      {
+        "city_id": "澄迈",
+        "median_unit_price_cny_sqm": 10909.59,
+        "p25_unit_price_cny_sqm": 9911.6,
+        "p75_unit_price_cny_sqm": 12000.0,
+        "sample_count": 638
+      },
+      {
+        "city_id": "兰州",
+        "median_unit_price_cny_sqm": 10643.07,
+        "p25_unit_price_cny_sqm": 9006.85,
+        "p75_unit_price_cny_sqm": 12548.83,
+        "sample_count": 640
+      },
+      {
+        "city_id": "南昌",
+        "median_unit_price_cny_sqm": 10568.27,
+        "p25_unit_price_cny_sqm": 8909.25,
+        "p75_unit_price_cny_sqm": 12607.04,
+        "sample_count": 581
+      },
+      {
+        "city_id": "惠州",
+        "median_unit_price_cny_sqm": 10555.56,
+        "p25_unit_price_cny_sqm": 8582.18,
+        "p75_unit_price_cny_sqm": 12721.03,
+        "sample_count": 149
+      },
+      {
+        "city_id": "邯郸",
+        "median_unit_price_cny_sqm": 10481.93,
+        "p25_unit_price_cny_sqm": 9393.94,
+        "p75_unit_price_cny_sqm": 11647.06,
+        "sample_count": 118
+      },
+      {
+        "city_id": "赣州",
+        "median_unit_price_cny_sqm": 10449.44,
+        "p25_unit_price_cny_sqm": 7081.24,
+        "p75_unit_price_cny_sqm": 13774.1,
+        "sample_count": 244
+      },
+      {
+        "city_id": "南宁",
+        "median_unit_price_cny_sqm": 10245.9,
+        "p25_unit_price_cny_sqm": 8705.36,
+        "p75_unit_price_cny_sqm": 13374.36,
+        "sample_count": 472
+      },
+      {
+        "city_id": "淮安",
+        "median_unit_price_cny_sqm": 10240.0,
+        "p25_unit_price_cny_sqm": 8775.53,
+        "p75_unit_price_cny_sqm": 13465.63,
+        "sample_count": 386
+      },
+      {
+        "city_id": "中山",
+        "median_unit_price_cny_sqm": 9944.13,
+        "p25_unit_price_cny_sqm": 7961.78,
+        "p75_unit_price_cny_sqm": 11884.55,
+        "sample_count": 549
+      },
+      {
+        "city_id": "泰安",
+        "median_unit_price_cny_sqm": 9826.74,
+        "p25_unit_price_cny_sqm": 8455.47,
+        "p75_unit_price_cny_sqm": 12500.0,
+        "sample_count": 284
+      },
+      {
+        "city_id": "咸阳",
+        "median_unit_price_cny_sqm": 9703.2,
+        "p25_unit_price_cny_sqm": 7182.25,
+        "p75_unit_price_cny_sqm": 13248.22,
+        "sample_count": 521
+      },
+      {
+        "city_id": "句容",
+        "median_unit_price_cny_sqm": 9539.91,
+        "p25_unit_price_cny_sqm": 8102.79,
+        "p75_unit_price_cny_sqm": 10621.47,
+        "sample_count": 684
+      },
+      {
+        "city_id": "长沙",
+        "median_unit_price_cny_sqm": 9516.15,
+        "p25_unit_price_cny_sqm": 8083.53,
+        "p75_unit_price_cny_sqm": 11284.19,
+        "sample_count": 680
+      },
+      {
+        "city_id": "呼和浩特",
+        "median_unit_price_cny_sqm": 9488.21,
+        "p25_unit_price_cny_sqm": 7946.03,
+        "p75_unit_price_cny_sqm": 11292.92,
+        "sample_count": 586
+      },
+      {
+        "city_id": "唐山",
+        "median_unit_price_cny_sqm": 9420.46,
+        "p25_unit_price_cny_sqm": 7775.48,
+        "p75_unit_price_cny_sqm": 11986.3,
+        "sample_count": 762
+      },
+      {
+        "city_id": "广元",
+        "median_unit_price_cny_sqm": 9223.3,
+        "p25_unit_price_cny_sqm": 7818.88,
+        "p75_unit_price_cny_sqm": 10000.0,
+        "sample_count": 179
+      },
+      {
+        "city_id": "济宁",
+        "median_unit_price_cny_sqm": 9196.95,
+        "p25_unit_price_cny_sqm": 8038.59,
+        "p75_unit_price_cny_sqm": 10310.73,
+        "sample_count": 256
+      },
+      {
+        "city_id": "烟台",
+        "median_unit_price_cny_sqm": 9178.08,
+        "p25_unit_price_cny_sqm": 7951.81,
+        "p75_unit_price_cny_sqm": 11094.92,
+        "sample_count": 719
+      },
+      {
+        "city_id": "承德",
+        "median_unit_price_cny_sqm": 9074.7,
+        "p25_unit_price_cny_sqm": 8095.24,
+        "p75_unit_price_cny_sqm": 10152.89,
+        "sample_count": 134
+      },
+      {
+        "city_id": "威海",
+        "median_unit_price_cny_sqm": 9049.77,
+        "p25_unit_price_cny_sqm": 7805.86,
+        "p75_unit_price_cny_sqm": 10649.18,
+        "sample_count": 875
+      },
+      {
+        "city_id": "沈阳",
+        "median_unit_price_cny_sqm": 8950.9,
+        "p25_unit_price_cny_sqm": 7510.37,
+        "p75_unit_price_cny_sqm": 10624.51,
+        "sample_count": 966
+      },
+      {
+        "city_id": "太原",
+        "median_unit_price_cny_sqm": 8909.85,
+        "p25_unit_price_cny_sqm": 7600.71,
+        "p75_unit_price_cny_sqm": 10603.7,
+        "sample_count": 732
+      },
+      {
+        "city_id": "马鞍山",
+        "median_unit_price_cny_sqm": 8841.73,
+        "p25_unit_price_cny_sqm": 6722.69,
+        "p75_unit_price_cny_sqm": 11072.26,
+        "sample_count": 628
+      },
+      {
+        "city_id": "丹阳",
+        "median_unit_price_cny_sqm": 8764.04,
+        "p25_unit_price_cny_sqm": 7750.0,
+        "p75_unit_price_cny_sqm": 10642.33,
+        "sample_count": 221
+      },
+      {
+        "city_id": "绵阳",
+        "median_unit_price_cny_sqm": 8747.88,
+        "p25_unit_price_cny_sqm": 6774.42,
+        "p75_unit_price_cny_sqm": 10255.19,
+        "sample_count": 654
+      },
+      {
+        "city_id": "湛江",
+        "median_unit_price_cny_sqm": 8743.73,
+        "p25_unit_price_cny_sqm": 6216.22,
+        "p75_unit_price_cny_sqm": 11427.15,
+        "sample_count": 352
+      },
+      {
+        "city_id": "保定",
+        "median_unit_price_cny_sqm": 8666.67,
+        "p25_unit_price_cny_sqm": 7498.85,
+        "p75_unit_price_cny_sqm": 10119.05,
+        "sample_count": 579
+      },
+      {
+        "city_id": "长春",
+        "median_unit_price_cny_sqm": 8620.69,
+        "p25_unit_price_cny_sqm": 7608.7,
+        "p75_unit_price_cny_sqm": 9689.19,
+        "sample_count": 877
+      },
+      {
+        "city_id": "镇江",
+        "median_unit_price_cny_sqm": 8582.22,
+        "p25_unit_price_cny_sqm": 7191.01,
+        "p75_unit_price_cny_sqm": 10197.68,
+        "sample_count": 526
+      },
+      {
+        "city_id": "宜宾",
+        "median_unit_price_cny_sqm": 8516.85,
+        "p25_unit_price_cny_sqm": 7272.73,
+        "p75_unit_price_cny_sqm": 9972.53,
+        "sample_count": 301
+      },
+      {
+        "city_id": "九江",
+        "median_unit_price_cny_sqm": 8250.0,
+        "p25_unit_price_cny_sqm": 6596.0,
+        "p75_unit_price_cny_sqm": 10035.66,
+        "sample_count": 281
+      },
+      {
+        "city_id": "襄阳",
+        "median_unit_price_cny_sqm": 7949.56,
+        "p25_unit_price_cny_sqm": 6943.58,
+        "p75_unit_price_cny_sqm": 9284.42,
+        "sample_count": 434
+      },
+      {
+        "city_id": "上饶",
+        "median_unit_price_cny_sqm": 7924.11,
+        "p25_unit_price_cny_sqm": 6806.54,
+        "p75_unit_price_cny_sqm": 9516.65,
+        "sample_count": 203
+      },
+      {
+        "city_id": "临沂",
+        "median_unit_price_cny_sqm": 7878.79,
+        "p25_unit_price_cny_sqm": 6375.13,
+        "p75_unit_price_cny_sqm": 9839.82,
+        "sample_count": 224
+      },
+      {
+        "city_id": "乌鲁木齐",
+        "median_unit_price_cny_sqm": 7861.43,
+        "p25_unit_price_cny_sqm": 6800.0,
+        "p75_unit_price_cny_sqm": 9022.56,
+        "sample_count": 496
+      },
+      {
+        "city_id": "吉安",
+        "median_unit_price_cny_sqm": 7701.71,
+        "p25_unit_price_cny_sqm": 6690.86,
+        "p75_unit_price_cny_sqm": 9749.46,
+        "sample_count": 138
+      },
+      {
+        "city_id": "安庆",
+        "median_unit_price_cny_sqm": 7663.43,
+        "p25_unit_price_cny_sqm": 6378.34,
+        "p75_unit_price_cny_sqm": 9018.26,
+        "sample_count": 376
+      },
+      {
+        "city_id": "哈尔滨",
+        "median_unit_price_cny_sqm": 7658.54,
+        "p25_unit_price_cny_sqm": 6256.25,
+        "p75_unit_price_cny_sqm": 9190.96,
+        "sample_count": 809
+      },
+      {
+        "city_id": "贵阳",
+        "median_unit_price_cny_sqm": 7587.65,
+        "p25_unit_price_cny_sqm": 6625.1,
+        "p75_unit_price_cny_sqm": 8750.0,
+        "sample_count": 443
+      },
+      {
+        "city_id": "宜昌",
+        "median_unit_price_cny_sqm": 7390.3,
+        "p25_unit_price_cny_sqm": 6439.74,
+        "p75_unit_price_cny_sqm": 8384.92,
+        "sample_count": 366
+      },
+      {
+        "city_id": "洛阳",
+        "median_unit_price_cny_sqm": 7387.14,
+        "p25_unit_price_cny_sqm": 6166.91,
+        "p75_unit_price_cny_sqm": 9099.5,
+        "sample_count": 549
+      },
+      {
+        "city_id": "柳州",
+        "median_unit_price_cny_sqm": 7384.31,
+        "p25_unit_price_cny_sqm": 6329.11,
+        "p75_unit_price_cny_sqm": 8604.56,
+        "sample_count": 476
+      },
+      {
+        "city_id": "遂宁",
+        "median_unit_price_cny_sqm": 7366.77,
+        "p25_unit_price_cny_sqm": 5827.25,
+        "p75_unit_price_cny_sqm": 9078.65,
+        "sample_count": 284
+      },
+      {
+        "city_id": "包头",
+        "median_unit_price_cny_sqm": 7272.73,
+        "p25_unit_price_cny_sqm": 5636.98,
+        "p75_unit_price_cny_sqm": 8876.4,
+        "sample_count": 676
+      },
+      {
+        "city_id": "江门",
+        "median_unit_price_cny_sqm": 7243.32,
+        "p25_unit_price_cny_sqm": 5581.4,
+        "p75_unit_price_cny_sqm": 9250.69,
+        "sample_count": 414
+      },
+      {
+        "city_id": "晋中",
+        "median_unit_price_cny_sqm": 7209.3,
+        "p25_unit_price_cny_sqm": 6474.82,
+        "p75_unit_price_cny_sqm": 8037.83,
+        "sample_count": 203
+      },
+      {
+        "city_id": "达州",
+        "median_unit_price_cny_sqm": 7187.5,
+        "p25_unit_price_cny_sqm": 6000.0,
+        "p75_unit_price_cny_sqm": 8000.0,
+        "sample_count": 496
+      },
+      {
+        "city_id": "雅安",
+        "median_unit_price_cny_sqm": 6933.33,
+        "p25_unit_price_cny_sqm": 5931.03,
+        "p75_unit_price_cny_sqm": 8219.18,
+        "sample_count": 359
+      },
+      {
+        "city_id": "赤峰",
+        "median_unit_price_cny_sqm": 6888.29,
+        "p25_unit_price_cny_sqm": 6012.66,
+        "p75_unit_price_cny_sqm": 7661.11,
+        "sample_count": 538
+      },
+      {
+        "city_id": "南充",
+        "median_unit_price_cny_sqm": 6697.35,
+        "p25_unit_price_cny_sqm": 5048.05,
+        "p75_unit_price_cny_sqm": 7770.11,
+        "sample_count": 430
+      },
+      {
+        "city_id": "阜阳",
+        "median_unit_price_cny_sqm": 6678.65,
+        "p25_unit_price_cny_sqm": 5556.29,
+        "p75_unit_price_cny_sqm": 8401.92,
+        "sample_count": 145
+      },
+      {
+        "city_id": "淄博",
+        "median_unit_price_cny_sqm": 6625.0,
+        "p25_unit_price_cny_sqm": 5744.56,
+        "p75_unit_price_cny_sqm": 8045.45,
+        "sample_count": 396
+      },
+      {
+        "city_id": "吉林",
+        "median_unit_price_cny_sqm": 6546.41,
+        "p25_unit_price_cny_sqm": 5598.08,
+        "p75_unit_price_cny_sqm": 7406.52,
+        "sample_count": 544
+      },
+      {
+        "city_id": "常德",
+        "median_unit_price_cny_sqm": 6533.33,
+        "p25_unit_price_cny_sqm": 5507.25,
+        "p75_unit_price_cny_sqm": 7612.12,
+        "sample_count": 167
+      },
+      {
+        "city_id": "岳阳",
+        "median_unit_price_cny_sqm": 6531.2,
+        "p25_unit_price_cny_sqm": 5476.92,
+        "p75_unit_price_cny_sqm": 7808.99,
+        "sample_count": 221
+      },
+      {
+        "city_id": "清远",
+        "median_unit_price_cny_sqm": 6518.99,
+        "p25_unit_price_cny_sqm": 5500.0,
+        "p75_unit_price_cny_sqm": 7501.96,
+        "sample_count": 481
+      },
+      {
+        "city_id": "开封",
+        "median_unit_price_cny_sqm": 6451.61,
+        "p25_unit_price_cny_sqm": 4699.93,
+        "p75_unit_price_cny_sqm": 7614.78,
+        "sample_count": 378
+      },
+      {
+        "city_id": "资阳",
+        "median_unit_price_cny_sqm": 6444.44,
+        "p25_unit_price_cny_sqm": 5939.29,
+        "p75_unit_price_cny_sqm": 7428.57,
+        "sample_count": 201
+      },
+      {
+        "city_id": "攀枝花",
+        "median_unit_price_cny_sqm": 6377.55,
+        "p25_unit_price_cny_sqm": 5014.52,
+        "p75_unit_price_cny_sqm": 7359.55,
+        "sample_count": 162
+      },
+      {
+        "city_id": "德阳",
+        "median_unit_price_cny_sqm": 6363.64,
+        "p25_unit_price_cny_sqm": 4848.48,
+        "p75_unit_price_cny_sqm": 7378.53,
+        "sample_count": 237
+      },
+      {
+        "city_id": "张家口",
+        "median_unit_price_cny_sqm": 6250.0,
+        "p25_unit_price_cny_sqm": 5000.0,
+        "p75_unit_price_cny_sqm": 7361.8,
+        "sample_count": 516
+      },
+      {
+        "city_id": "新乡",
+        "median_unit_price_cny_sqm": 6250.0,
+        "p25_unit_price_cny_sqm": 4718.29,
+        "p75_unit_price_cny_sqm": 7857.14,
+        "sample_count": 459
+      },
+      {
+        "city_id": "菏泽",
+        "median_unit_price_cny_sqm": 6117.65,
+        "p25_unit_price_cny_sqm": 5470.59,
+        "p75_unit_price_cny_sqm": 7138.69,
+        "sample_count": 450
+      },
+      {
+        "city_id": "潍坊",
+        "median_unit_price_cny_sqm": 6059.56,
+        "p25_unit_price_cny_sqm": 5356.88,
+        "p75_unit_price_cny_sqm": 7126.44,
+        "sample_count": 418
+      },
+      {
+        "city_id": "丹东",
+        "median_unit_price_cny_sqm": 5967.92,
+        "p25_unit_price_cny_sqm": 5000.0,
+        "p75_unit_price_cny_sqm": 7116.22,
+        "sample_count": 663
+      },
+      {
+        "city_id": "银川",
+        "median_unit_price_cny_sqm": 5966.59,
+        "p25_unit_price_cny_sqm": 4804.6,
+        "p75_unit_price_cny_sqm": 7204.07,
+        "sample_count": 545
+      },
+      {
+        "city_id": "驻马店",
+        "median_unit_price_cny_sqm": 5825.01,
+        "p25_unit_price_cny_sqm": 4370.39,
+        "p75_unit_price_cny_sqm": 7000.0,
+        "sample_count": 221
+      },
+      {
+        "city_id": "株洲",
+        "median_unit_price_cny_sqm": 5766.17,
+        "p25_unit_price_cny_sqm": 4678.36,
+        "p75_unit_price_cny_sqm": 6668.2,
+        "sample_count": 226
+      },
+      {
+        "city_id": "抚顺",
+        "median_unit_price_cny_sqm": 5762.41,
+        "p25_unit_price_cny_sqm": 4887.59,
+        "p75_unit_price_cny_sqm": 6582.28,
+        "sample_count": 239
+      },
+      {
+        "city_id": "桂林",
+        "median_unit_price_cny_sqm": 5618.24,
+        "p25_unit_price_cny_sqm": 4627.54,
+        "p75_unit_price_cny_sqm": 6863.91,
+        "sample_count": 391
+      },
+      {
+        "city_id": "北海",
+        "median_unit_price_cny_sqm": 5511.36,
+        "p25_unit_price_cny_sqm": 4637.07,
+        "p75_unit_price_cny_sqm": 6586.9,
+        "sample_count": 1161
+      },
+      {
+        "city_id": "许昌",
+        "median_unit_price_cny_sqm": 5454.55,
+        "p25_unit_price_cny_sqm": 4085.28,
+        "p75_unit_price_cny_sqm": 7077.98,
+        "sample_count": 289
+      },
+      {
+        "city_id": "运城",
+        "median_unit_price_cny_sqm": 5393.26,
+        "p25_unit_price_cny_sqm": 4775.19,
+        "p75_unit_price_cny_sqm": 6000.0,
+        "sample_count": 140
+      },
+      {
+        "city_id": "周口",
+        "median_unit_price_cny_sqm": 5348.84,
+        "p25_unit_price_cny_sqm": 4269.66,
+        "p75_unit_price_cny_sqm": 6306.41,
+        "sample_count": 126
+      },
+      {
+        "city_id": "防城港",
+        "median_unit_price_cny_sqm": 5168.54,
+        "p25_unit_price_cny_sqm": 4546.1,
+        "p75_unit_price_cny_sqm": 5964.21,
+        "sample_count": 400
+      },
+      {
+        "city_id": "黄石",
+        "median_unit_price_cny_sqm": 5000.0,
+        "p25_unit_price_cny_sqm": 4247.79,
+        "p75_unit_price_cny_sqm": 6061.02,
+        "sample_count": 374
+      },
+      {
+        "city_id": "鄂州",
+        "median_unit_price_cny_sqm": 4722.22,
+        "p25_unit_price_cny_sqm": 3809.52,
+        "p75_unit_price_cny_sqm": 5994.41,
+        "sample_count": 536
+      },
+      {
+        "city_id": "汉中",
+        "median_unit_price_cny_sqm": 4487.18,
+        "p25_unit_price_cny_sqm": 3674.7,
+        "p75_unit_price_cny_sqm": 5675.71,
+        "sample_count": 397
+      },
+      {
+        "city_id": "宝鸡",
+        "median_unit_price_cny_sqm": 3821.66,
+        "p25_unit_price_cny_sqm": 3057.53,
+        "p75_unit_price_cny_sqm": 4789.49,
+        "sample_count": 426
+      }
+    ],
+    "comparable_segment_definition": {
+      "area_sqm": "60 to 90 inclusive",
+      "rooms": "2 or 3"
+    }
+  },
+  "q5_platform_snapshot_signals": {
+    "interpretation_boundary": "Follower count and listing age are platform-observed snapshot fields; they are not verified buyer behavior or sale outcomes.",
+    "listing_age_distribution": [
+      {
+        "listing_age_days": 1,
+        "sample_count": 520
+      },
+      {
+        "listing_age_days": 2,
+        "sample_count": 857
+      },
+      {
+        "listing_age_days": 3,
+        "sample_count": 1298
+      },
+      {
+        "listing_age_days": 4,
+        "sample_count": 1483
+      },
+      {
+        "listing_age_days": 5,
+        "sample_count": 1648
+      },
+      {
+        "listing_age_days": 6,
+        "sample_count": 1988
+      },
+      {
+        "listing_age_days": 7,
+        "sample_count": 2180
+      },
+      {
+        "listing_age_days": 8,
+        "sample_count": 2160
+      },
+      {
+        "listing_age_days": 9,
+        "sample_count": 1949
+      },
+      {
+        "listing_age_days": 10,
+        "sample_count": 1966
+      },
+      {
+        "listing_age_days": 11,
+        "sample_count": 1933
+      },
+      {
+        "listing_age_days": 12,
+        "sample_count": 1906
+      },
+      {
+        "listing_age_days": 13,
+        "sample_count": 1931
+      },
+      {
+        "listing_age_days": 14,
+        "sample_count": 1923
+      },
+      {
+        "listing_age_days": 15,
+        "sample_count": 2049
+      },
+      {
+        "listing_age_days": 16,
+        "sample_count": 2046
+      },
+      {
+        "listing_age_days": 17,
+        "sample_count": 1750
+      },
+      {
+        "listing_age_days": 18,
+        "sample_count": 1685
+      },
+      {
+        "listing_age_days": 19,
+        "sample_count": 1774
+      },
+      {
+        "listing_age_days": 20,
+        "sample_count": 1682
+      },
+      {
+        "listing_age_days": 21,
+        "sample_count": 1719
+      },
+      {
+        "listing_age_days": 22,
+        "sample_count": 1764
+      },
+      {
+        "listing_age_days": 23,
+        "sample_count": 1783
+      },
+      {
+        "listing_age_days": 24,
+        "sample_count": 1811
+      },
+      {
+        "listing_age_days": 25,
+        "sample_count": 1798
+      },
+      {
+        "listing_age_days": 26,
+        "sample_count": 1686
+      },
+      {
+        "listing_age_days": 27,
+        "sample_count": 1682
+      },
+      {
+        "listing_age_days": 28,
+        "sample_count": 1639
+      },
+      {
+        "listing_age_days": 29,
+        "sample_count": 1725
+      },
+      {
+        "listing_age_days": 30,
+        "sample_count": 23730
+      },
+      {
+        "listing_age_days": 31,
+        "sample_count": 1402
+      },
+      {
+        "listing_age_days": 60,
+        "sample_count": 18959
+      },
+      {
+        "listing_age_days": 90,
+        "sample_count": 16108
+      },
+      {
+        "listing_age_days": 120,
+        "sample_count": 14485
+      },
+      {
+        "listing_age_days": 150,
+        "sample_count": 12692
+      },
+      {
+        "listing_age_days": 180,
+        "sample_count": 10774
+      },
+      {
+        "listing_age_days": 210,
+        "sample_count": 9699
+      },
+      {
+        "listing_age_days": 240,
+        "sample_count": 10947
+      },
+      {
+        "listing_age_days": 270,
+        "sample_count": 5638
+      },
+      {
+        "listing_age_days": 300,
+        "sample_count": 5489
+      },
+      {
+        "listing_age_days": 330,
+        "sample_count": 5043
+      },
+      {
+        "listing_age_days": 365,
+        "sample_count": 81932
+      }
+    ],
+    "segment_statistics": {
+      "area_bucket": [
+        {
+          "follower_count": {
+            "iqr": 6.0,
+            "median": 2.0,
+            "p25": 0.0,
+            "p75": 6.0
+          },
+          "listing_age_days": {
+            "iqr": 270.0,
+            "median": 120.0,
+            "p25": 30.0,
+            "p75": 300.0
+          },
+          "sample_count": 19436,
+          "segment": "lt_60"
+        },
+        {
+          "follower_count": {
+            "iqr": 5.0,
+            "median": 1.0,
+            "p25": 0.0,
+            "p75": 5.0
+          },
+          "listing_age_days": {
+            "iqr": 300.0,
+            "median": 120.0,
+            "p25": 30.0,
+            "p75": 330.0
+          },
+          "sample_count": 65748,
+          "segment": "60_to_lt_90"
+        },
+        {
+          "follower_count": {
+            "iqr": 4.0,
+            "median": 1.0,
+            "p25": 0.0,
+            "p75": 4.0
+          },
+          "listing_age_days": {
+            "iqr": 335.0,
+            "median": 150.0,
+            "p25": 30.0,
+            "p75": 365.0
+          },
+          "sample_count": 85303,
+          "segment": "90_to_lt_120"
+        },
+        {
+          "follower_count": {
+            "iqr": 4.0,
+            "median": 1.0,
+            "p25": 0.0,
+            "p75": 4.0
+          },
+          "listing_age_days": {
+            "iqr": 305.0,
+            "median": 180.0,
+            "p25": 60.0,
+            "p75": 365.0
+          },
+          "sample_count": 62328,
+          "segment": "120_to_lt_144"
+        },
+        {
+          "follower_count": {
+            "iqr": 7.0,
+            "median": 2.0,
+            "p25": 0.0,
+            "p75": 7.0
+          },
+          "listing_age_days": {
+            "iqr": 305.0,
+            "median": 240.0,
+            "p25": 60.0,
+            "p75": 365.0
+          },
+          "sample_count": 34490,
+          "segment": "144_plus"
+        }
+      ],
+      "asking_total_price_bucket": [
+        {
+          "follower_count": {
+            "iqr": 4.0,
+            "median": 1.0,
+            "p25": 0.0,
+            "p75": 4.0
+          },
+          "listing_age_days": {
+            "iqr": 334.0,
+            "median": 180.0,
+            "p25": 31.0,
+            "p75": 365.0
+          },
+          "sample_count": 124458,
+          "segment": "lt_100"
+        },
+        {
+          "follower_count": {
+            "iqr": 5.0,
+            "median": 1.0,
+            "p25": 0.0,
+            "p75": 5.0
+          },
+          "listing_age_days": {
+            "iqr": 335.0,
+            "median": 150.0,
+            "p25": 30.0,
+            "p75": 365.0
+          },
+          "sample_count": 95436,
+          "segment": "100_to_lt_200"
+        },
+        {
+          "follower_count": {
+            "iqr": 7.0,
+            "median": 2.0,
+            "p25": 0.0,
+            "p75": 7.0
+          },
+          "listing_age_days": {
+            "iqr": 335.0,
+            "median": 120.0,
+            "p25": 30.0,
+            "p75": 365.0
+          },
+          "sample_count": 26035,
+          "segment": "200_to_lt_300"
+        },
+        {
+          "follower_count": {
+            "iqr": 10.0,
+            "median": 3.0,
+            "p25": 0.0,
+            "p75": 10.0
+          },
+          "listing_age_days": {
+            "iqr": 335.0,
+            "median": 120.0,
+            "p25": 30.0,
+            "p75": 365.0
+          },
+          "sample_count": 14312,
+          "segment": "300_to_lt_500"
+        },
+        {
+          "follower_count": {
+            "iqr": 14.0,
+            "median": 5.0,
+            "p25": 1.0,
+            "p75": 15.0
+          },
+          "listing_age_days": {
+            "iqr": 212.0,
+            "median": 90.0,
+            "p25": 28.0,
+            "p75": 240.0
+          },
+          "sample_count": 7064,
+          "segment": "500_plus"
+        }
+      ]
+    }
+  }
+}

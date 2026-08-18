@@ -9,6 +9,8 @@ Real listing-level datasets are not distributed in the current tree. See [Public
 
 The first reproducible preparation slice is documented in [Analytics Slice 1](docs/analytics_slice_1.md). It rebuilds the audited `300,397 -> 298,146 -> 267,305` lineage from a private canonical snapshot without training models or using incompletely sourced macro fields.
 
+Current listing-only analytics are available as machine-generated [findings](reports/findings.md), [summary data](reports/summary.json), and five aggregate figures under [`reports/figures/`](reports/figures/). No row-level data is published.
+
 ## Portfolio Summary
 
 - Goal: build a data pipeline from web-crawled housing data to collateral value prediction.
@@ -43,7 +45,7 @@ From legacy cleaning notes and committed historical outputs (the row-level files
 
 Main feature groups include:
 - Property attributes: rooms, halls, area, orientation, furnishing, floor level, building structure.
-- Market/liquidity hints: follower count, listing duration.
+- Platform snapshot fields: follower count and encoded listing age.
 - City/macro variables: GDP, region, green coverage, urban population, built-up area, water resources.
 - Text-derived tags: tax benefit, transit convenience, nearby business district, water view, parking, lighting, park proximity.
 
@@ -114,7 +116,14 @@ Run the same preparation logic on the tracked synthetic fixture:
 
 ```bash
 python -m property_pledge.analytics_v1 --source synthetic
+python -m property_pledge.run_analytics --source synthetic
 python -m unittest discover -s tests -v
+```
+
+Generate the five aggregate analytics outputs from the private canonical analytical table:
+
+```bash
+python -m property_pledge.run_analytics --source real
 ```
 
 3. Historical notebook order:

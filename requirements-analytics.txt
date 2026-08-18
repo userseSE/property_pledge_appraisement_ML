@@ -1,0 +1,2 @@
+# Minimal deterministic runtime for Analytics Slice 1.
+pandas==2.2.3

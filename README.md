@@ -7,6 +7,8 @@ I kept the original research assets and added portfolio-friendly documentation a
 
 Real listing-level datasets are not distributed in the current tree. See [Public Data Boundary](docs/public_data_boundary.md); public examples under `fixtures/` are fully synthetic.
 
+The first reproducible preparation slice is documented in [Analytics Slice 1](docs/analytics_slice_1.md). It rebuilds the audited `300,397 -> 298,146 -> 267,305` lineage from a private canonical snapshot without training models or using incompletely sourced macro fields.
+
 ## Portfolio Summary
 
 - Goal: build a data pipeline from web-crawled housing data to collateral value prediction.
@@ -100,6 +102,20 @@ jupyter lab
 ```
 
 The notebooks preserve historical absolute paths and require separately supplied private data; the public synthetic fixture is a schema example, not a drop-in replacement for every legacy notebook.
+
+Prepare the private Analytics v1 table:
+
+```bash
+python -m pip install -r requirements-analytics.txt
+python -m property_pledge.analytics_v1 --source legacy --expect-canonical-lineage
+```
+
+Run the same preparation logic on the tracked synthetic fixture:
+
+```bash
+python -m property_pledge.analytics_v1 --source synthetic
+python -m unittest discover -s tests -v
+```
 
 3. Historical notebook order:
 - `code/crawlData.ipynb`
